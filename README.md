@@ -14,6 +14,6 @@
 5. open browser and enter `http://localhost:8080/`
 
 ## App Screenshot
-![Description of screen-shot]()
+[Description of screen-shot]()
 
 ## Next Steps
