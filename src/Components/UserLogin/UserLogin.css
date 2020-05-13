@@ -12,6 +12,8 @@
 
 input {
   background: inherit;
+  color: white;
+  font-size: 1rem;
   margin: .5rem;
   padding: .5rem;
 }
