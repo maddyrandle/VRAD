@@ -4,7 +4,7 @@ import './UserLogin.css';
 class UserLogin extends Component {
   render() {
     return (
-      <section className="UserLogin">
+      <section>
         <p className="UserLoginTitle">Login Below</p>
         <div>
           <input placeholder="username" type="text"/>

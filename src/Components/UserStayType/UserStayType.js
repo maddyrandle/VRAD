@@ -7,9 +7,15 @@ class UserStayType extends Component {
       <section className="userStayType">
         <p>Please Choose a Booking Type</p>
         <section className="stayTypes">
-          <button>Buissness</button>
-          <button>Vacation</button>
-          <button>Other</button>
+          <button className="buisnessBtn">Buisness
+
+          </button>
+          <button className="vacationBtn">Vacation
+
+          </button>
+          <button className="otherBtn">Other
+
+          </button>
         </section>
       </section>
     );
