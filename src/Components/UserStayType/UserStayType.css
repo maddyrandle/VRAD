@@ -1,0 +1,28 @@
+.userStayType {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+p {
+  font-size: 1.3rem;
+  margin-top: .7rem;
+  padding: 1rem;
+}
+
+.stayTypes {
+  background: #6c393a;
+  margin-bottom: 1rem;
+  height: 7rem;
+  width: 25rem;
+}
+
+button {
+  background: #6c393a;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  margin: .5rem;
+  padding: 0 1rem;
+}
