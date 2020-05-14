@@ -11,14 +11,18 @@ class App extends Component {
         areas: []
       }
   }
+
   componentDidMount = async () => {
     let availableAreaResponse = await fetch('https://vrad-api.herokuapp.com/api/v1/areas')
     let availableAreaData = await availableAreaResponse.json()
 
+
     availableAreaData.areas.map(async (area) => {
+      
       var fullAreaResponse = await fetch(`https://vrad-api.herokuapp.com${area.details}`)
       var fullAreaDetails =  await fullAreaResponse.json()
       area.details = fullAreaDetails
+
 
     area.details.listings.map(async (listing) => {
       let listingResponse = await fetch(`https://vrad-api.herokuapp.com${listing}`)
@@ -45,8 +49,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-// <section className="landingPageWrapper">
-//   <PageHeaderContainer />
-// </section>
