@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './UserLogin.css';
 
 class UserLogin extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
       this.state = {
         username: '',
         password: ''
@@ -18,8 +18,9 @@ class UserLogin extends Component {
     this.setState({ password: event.target.value })
   }
 
-  preventDefault = (event) => {
+  handleLogin = (event) => {
     event.preventDefault();
+    this.props.pageLogin()
   }
 
   render() {
@@ -27,19 +28,19 @@ class UserLogin extends Component {
       <section>
         <p className="UserLoginTitle">Login Below</p>
         <div>
-
           <input onChange={ this.updateUserName }
             placeholder="username"
             type="text"
             name="username"/>
 
-          <input onChange={ this.updatePassword }
-            placeholder="password"
-            type="password"
-            name="password"/>
-
+            <input onChange={ this.updatePassword }
+              placeholder="password"
+              type="password"
+              name="password"/>
         </div>
-        <button className="UserLoginBtn" disabled={ !this.state.username.length && !this.state.password.length } onClick={ this.preventDefault }>Login</button>
+          <button className="UserLoginBtn"
+          disabled={ !this.state.username.length && !this.state.password.length }
+          onClick={ this.handleLogin }>Login</button>
       </section>
     );
   }
