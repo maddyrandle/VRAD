@@ -1,49 +1,44 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import './UserLogin.css';
 
-class UserLogin extends Component {
-  constructor(props) {
-    super(props);
-      this.state = {
-        username: '',
-        password: ''
-      }
-  }
+const UserLogin = (props) => {
 
-  updateUserName = (event) => {
-    this.setState({ username: event.target.value })
+  const updateUserName = (event) => {
+    props.setUserName(event.target.value)
   }
-
-  updatePassword = (event) => {
-    this.setState({ password: event.target.value })
+  const updatePassword = (event) => {
+    props.setPassword(event.target.value)
   }
-
-  handleLogin = (event) => {
+  const handleLogin = (event) => {
     event.preventDefault();
-    this.props.pageLogin()
   }
 
-  render() {
-    return (
-      <section>
-        <p className="UserLoginTitle">Login Below</p>
-        <div>
-          <input onChange={ this.updateUserName }
-            placeholder="username"
-            type="text"
-            name="username"/>
+  return (
+    <section>
+      <p className="UserLoginTitle">Login Below</p>
+      <div>
+        <input onChange={ updateUserName }
+          placeholder="username"
+          type="text"
+          name="username"/>
 
-            <input onChange={ this.updatePassword }
-              placeholder="password"
-              type="password"
-              name="password"/>
-        </div>
-          <button className="UserLoginBtn"
-          disabled={ !this.state.username.length && !this.state.password.length }
-          onClick={ this.handleLogin }>Login</button>
-      </section>
-    );
-  }
+          <input onChange={ updatePassword }
+            placeholder="password"
+            type="password"
+            name="password"/>
+      </div>
+
+      <Link to={() => {if (!props.stayType || !props.validateUser || !props.validatePassword) {
+        return '/'
+      } else {
+        return '/Neighborhoods'
+      }
+      }}
+        className="UserLoginBtn">Login
+      </Link>
+    </section>
+  );
 }
 
 export default UserLogin;
