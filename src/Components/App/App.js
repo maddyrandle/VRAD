@@ -12,9 +12,11 @@ class App extends Component {
   constructor() {
     super();
       this.state = {
+        user: '',
+        favorites: [],
+        password: '',
         stayType: '',
         areas: [],
-        isLoggedIn: false
       }
   }
 
@@ -42,20 +44,32 @@ class App extends Component {
     this.setState({ stayType: type })
   }
 
-  pageLogin = () => {
-    this.setState({
-      isLoggedIn : true
-    })
+  setPassword = (password) => {
+    this.setState({ password: password})
+  }
+
+  setUserName = (username) => {
+    this.setState({ user: username})
   }
 
   render() {
-
     return (
       <BrowserRouter>
         <main className="App">
-          {this.state.isLoggedIn ? <Redirect to='/Neighborhoods' /> : <Redirect to='/' />}
-          <LoginContainer getPurpose={ this.getPurpose } pageLogin={ this.pageLogin } />
-          <Route exact path="/Neighborhoods" render={() => <DefaultContainer name='Neighborhoods' /> } />
+          <Route
+            exact path='/'render={() => <LoginContainer
+            getPurpose={ this.getPurpose }
+            setUserName={this.setUserName}
+            setPassword={this.setPassword}
+            stayType={this.state.stayType}
+            validateUser={this.state.user}
+            validatePassword={this.state.password}/> }
+          />
+
+          <Route
+            exact path="/Neighborhoods" render={() => <DefaultContainer
+            name='Neighborhoods'/> }
+          />
         </main>
       </BrowserRouter>
     );
