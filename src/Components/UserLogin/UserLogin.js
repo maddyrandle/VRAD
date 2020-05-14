@@ -10,7 +10,7 @@ class UserLogin extends Component {
           <input placeholder="username" type="text"/>
           <input placeholder="password" type="password"/>
         </div>
-        <button className="UserLoginBtn">Login</button>
+        <button className="UserLoginBtn" disabled>Login</button>
       </section>
     );
   }
