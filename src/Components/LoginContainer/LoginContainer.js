@@ -4,13 +4,13 @@ import UserStayType from '../UserStayType/UserStayType';
 import UserLogin from '../UserLogin/UserLogin';
 import './LoginContainer.css';
 
-const LoginContainer = () => {
+const LoginContainer = ({ getPurpose }) => {
   return (
     <section className="loginContainerWrapper">
       <section className="loginContainer">
         <Title />
         <form>
-          <UserStayType />
+          <UserStayType getPurpose={ getPurpose }/>
           <UserLogin />
         </form>
       </section>
