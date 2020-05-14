@@ -1,3 +1,4 @@
+/* Booking Purpose Section */
 .userStayType {
   align-items: center;
   display: flex;
@@ -25,4 +26,10 @@ button {
   font-size: 1rem;
   margin: .5rem;
   padding: 0 1rem;
+}
+
+img {
+  display: flex;
+  margin: .5rem 0;
+  width: 4rem;
 }
