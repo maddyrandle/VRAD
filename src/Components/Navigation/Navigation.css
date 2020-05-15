@@ -1,0 +1,11 @@
+nav {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+}
+
+.signOutBtn,
+.otherNavBtn {
+  padding: .5rem;
+}
