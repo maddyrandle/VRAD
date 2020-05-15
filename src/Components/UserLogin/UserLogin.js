@@ -10,6 +10,7 @@ const UserLogin = (props) => {
   const updatePassword = (event) => {
     props.setPassword(event.target.value)
   }
+  
   const handleLogin = (event) => {
     event.preventDefault();
   }
