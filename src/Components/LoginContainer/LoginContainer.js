@@ -4,7 +4,7 @@ import UserStayType from '../UserStayType/UserStayType';
 import UserLogin from '../UserLogin/UserLogin';
 import './LoginContainer.css';
 
-const LoginContainer = ({ getPurpose, pageLogin, setUserName, setPassword, stayType, validateUser, validatePassword }) => {
+const LoginContainer = ({ getPurpose, setUserName, setPassword, stayType, validateUser, validatePassword }) => {
   return (
     <section className="loginContainerWrapper">
       <section className="loginContainer">
@@ -14,8 +14,6 @@ const LoginContainer = ({ getPurpose, pageLogin, setUserName, setPassword, stayT
             getPurpose={ getPurpose }
           />
           <UserLogin
-            pageLogin={ pageLogin }
-            pageLogin= { pageLogin }
             setUserName={ setUserName }
             setPassword={ setPassword }
             stayType={ stayType }
