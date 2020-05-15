@@ -3,12 +3,11 @@ import LandingPageGreeting from '../LandingPageGreeting/LandingPageGreeting';
 import Navigation from '../Navigation/Navigation';
 import './PageHeaderContainer.css';
 
-//
-// const PageHeaderContainer = () => {
-//   return (
-//     <LandingPageGreeting />
-//     <Navigation />
-//   );
-// }
 
-// export default PageHeaderContainer;
+const PageHeaderContainer = ({ currentState }) => {
+  return (
+    <LandingPageGreeting currentState={currentState}/>
+  );
+}
+
+export default PageHeaderContainer;
