@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-// import PageHeaderContainer from '../PageHeaderContainer/PageHeaderContainer'
+import PageHeaderContainer from '../PageHeaderContainer/PageHeaderContainer'
 // import ListingDetailsContainer from '../ListingDetailsContainer/ListingDetailsContainer'
 
-const DefaultContainer = () => {
+const DefaultContainer = ({currentState}) => {
 
   return (
     <main className='default-container'>
-      <h1>Hello</h1>
+      <PageHeaderContainer currentState={currentState}/>
     </main>
   )
 }
