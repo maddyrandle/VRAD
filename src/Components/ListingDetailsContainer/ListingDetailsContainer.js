@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import Neighborhood from '../Neighborhood/Neighborhood';
 
 
 
 const ListingDetailsContainer = () => {
   return (
-    <h1>ListingDetailsContainer</h1>
+    <div>
+      <h1>ListingDetailsContainer</h1>
+      <Neighborhood />
+    </div>
   );
 }
 
