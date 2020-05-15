@@ -68,6 +68,8 @@ class App extends Component {
 
           <Route
             exact path="/Neighborhoods" render={() => <DefaultContainer
+            currentState={this.state}
+            renderCondition='allAreas'
             name='Neighborhoods'/> }
           />
         </main>
