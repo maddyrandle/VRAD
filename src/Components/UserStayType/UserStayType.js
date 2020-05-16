@@ -25,7 +25,7 @@ const UserStayType = ({ getPurpose }) => {
         </button>
         <button className="otherBtn" id="other" onClick={ handleChange }>
           Other
-          <img className="otherBtnImg" src="https://image.flaticon.com/icons/svg/684/684834.svg" id="vacation" />
+          <img className="otherBtnImg" src="https://image.flaticon.com/icons/svg/684/684834.svg" id="other" />
         </button>
       </section>
     </section>

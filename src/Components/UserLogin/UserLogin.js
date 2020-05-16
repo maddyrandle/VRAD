@@ -10,7 +10,7 @@ const UserLogin = (props) => {
   const updatePassword = (event) => {
     props.setPassword(event.target.value)
   }
-  
+
   const handleLogin = (event) => {
     event.preventDefault();
   }
@@ -33,7 +33,7 @@ const UserLogin = (props) => {
       <Link to={() => {if (!props.stayType || !props.validateUser || !props.validatePassword) {
         return '/'
       } else {
-        return '/Neighborhoods'
+        return '/areas'
       }
       }}
         className="UserLoginBtn">Login
