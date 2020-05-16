@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React from 'react'
-=======
 import React, { Component } from 'react';
 import Neighborhood from '../Neighborhood/Neighborhood';
-
-
 
 const ListingDetailsContainer = () => {
   return (
@@ -16,4 +11,3 @@ const ListingDetailsContainer = () => {
 }
 
 export default ListingDetailsContainer;
->>>>>>> master
