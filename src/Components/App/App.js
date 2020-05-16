@@ -3,9 +3,7 @@ import LoginContainer from '../LoginContainer/LoginContainer';
 import PageHeaderContainer from '../PageHeaderContainer/PageHeaderContainer';
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Route, Redirect } from 'react-router-dom'
-
 import DefaultContainer from '../DefaultContainer/DefaultContainer'
-
 import './App.css';
 
 class App extends Component {
@@ -58,7 +56,7 @@ class App extends Component {
         <main className="App">
           <Route
             exact path='/'render={() => <LoginContainer
-            getPurpose={ this.getPurpose }
+            getPurpose={this.getPurpose}
             setUserName={this.setUserName}
             setPassword={this.setPassword}
             stayType={this.state.stayType}

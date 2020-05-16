@@ -1,0 +1,14 @@
+.landingPageGreeting {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 1rem;
+}

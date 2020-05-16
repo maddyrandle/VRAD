@@ -6,8 +6,8 @@ import './Navigation.css';
 const Navigation = () => {
   return (
     <nav>
-      <button>1</button>
-      <button>2</button>
+      <button className="signOutBtn">Sign Out</button>
+      <button className="otherNavBtn">Other Nav Btn</button>
     </nav>
   );
 }
