@@ -3,12 +3,21 @@ import PageHeaderContainer from '../PageHeaderContainer/PageHeaderContainer'
 import ListingDetailsContainer from '../ListingDetailsContainer/ListingDetailsContainer'
 import './DefaultContainer.css'
 
-const DefaultContainer = ({currentState}) => {
+const DefaultContainer = ({currentState, renderCondition}) => {
+  let topContainer;
+  let bottomContainer;
+
+  if(renderCondition === 'allAreas') {
+    topContainer = <PageHeaderContainer currentState={currentState} />
+    bottomContainer = <ListingDetailsContainer currentState={currentState}/>
+  } else if (renderCondition === 'selectedArea') {
+    console.log(1);
+  }
 
   return (
     <main className='defaultContainer'>
-      <PageHeaderContainer currentState={currentState} />
-      <ListingDetailsContainer currentState={currentState}/>
+      {topContainer}
+      {bottomContainer}
     </main>
   )
 }

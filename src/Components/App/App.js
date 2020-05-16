@@ -78,7 +78,10 @@ class App extends Component {
               const selectedArea = this.state.areas.areas.find(area => {
                 return area.details.id === parseInt(id)
               })
-              return <DefaultContainer selectedArea={selectedArea} />
+              return <DefaultContainer
+                selectedArea={selectedArea}
+                renderCondition='selectedArea'
+              />
             }}
           />
         </main>
