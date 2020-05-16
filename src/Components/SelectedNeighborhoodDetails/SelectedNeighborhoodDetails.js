@@ -12,5 +12,4 @@ const SelectedNeighboodDetails = ({selectedArea}) => {
   )
 }
 
-
 export default SelectedNeighboodDetails

@@ -7,6 +7,7 @@ const Neighborhood = ({nickname, description, fullName, id}) => {
     <section className="neighborhoodContainer">
       <div className='neighborhood'>
         <p className="fullName">{fullName}</p>
+        <p>IMAGES GO HERE</p>
         <p className="description">{description}</p>
         <Link to={`/areas/${id}/listings`} className="neighborhoodBtn" id={id}>Checkout {nickname}</Link>
       </div>

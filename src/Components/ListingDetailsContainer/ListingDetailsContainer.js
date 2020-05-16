@@ -5,7 +5,7 @@ import css from './ListingDetailsContainer.css'
 const ListingDetailsContainer = ({currentState, renderCondition, selectedArea}) => {
   if (renderCondition === 'allAreas') {
     let areaValues = Object.values(currentState.areas)
-    var rentalDetails = areaValues.map(areas => {
+    var details = areaValues.map(areas => {
       return areas.map(area => {
         return area = <Neighborhood
         key={area.details.id}
@@ -21,7 +21,7 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea}) 
 
   return (
     <section className='listingDetailsContainer'>
-      {rentalDetails}
+      {details}
     </section>
   );
 }
