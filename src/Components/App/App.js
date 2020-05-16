@@ -70,6 +70,17 @@ class App extends Component {
             renderCondition='allAreas'
             name='Neighborhoods'/> }
           />
+
+          <Route
+            path='/areas/:id/listings'
+            exact render={({ match }) => {
+              let { id } = match.params
+              const selectedArea = this.state.areas.areas.find(area => {
+                return area.details.id === parseInt(id)
+              })
+              return <DefaultContainer selectedArea={selectedArea} />
+            }}
+          />
         </main>
       </BrowserRouter>
     );

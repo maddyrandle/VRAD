@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Neighborhood.css'
+import { Link } from 'react-router-dom'
 
-const Neighborhood = () => {
+const Neighborhood = ({nickname, description, fullName, id}) => {
   return (
-    <section>
-      <div className="neighborhoodContainer">
-        <p className="neighborhood"></p>
-
+    <section className="neighborhoodContainer">
+      <div className='neighborhood'>
+        <p className="fullName">{fullName}</p>
+        <p className="description">{description}</p>
+        <Link to={`/areas/${id}/listings`} className="neighborhoodBtn" id={id}>Checkout {nickname}</Link>
       </div>
     </section>
   )

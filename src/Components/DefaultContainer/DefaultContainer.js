@@ -4,10 +4,11 @@ import ListingDetailsContainer from '../ListingDetailsContainer/ListingDetailsCo
 import './DefaultContainer.css'
 
 const DefaultContainer = ({currentState}) => {
+
   return (
     <main className='defaultContainer'>
       <PageHeaderContainer currentState={currentState} />
-      <ListingDetailsContainer />
+      <ListingDetailsContainer currentState={currentState}/>
     </main>
   )
 }
