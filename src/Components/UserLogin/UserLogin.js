@@ -28,7 +28,6 @@ const UserLogin = (props) => {
       </form>
 
       <Link to={() => {if (!props.stayType || !props.validateUser || !props.validatePassword) {
-
         return '/'
       } else {
         return '/areas'
