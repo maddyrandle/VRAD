@@ -75,7 +75,7 @@ class App extends Component {
             currentState={this.state}
             renderCondition='allAreas'
             name='Neighborhoods'
-            initialState={this.resetState}/> }
+            resetState={this.resetState}/> }
           />
 
           <Route
@@ -88,7 +88,7 @@ class App extends Component {
               return <DefaultContainer
                 selectedArea={selectedArea}
                 renderCondition='selectedArea'
-                initialState={this.resetState}
+                resetState={this.resetState}
               />
             }}
           />
