@@ -50,8 +50,13 @@ class App extends Component {
     this.setState({ user: username})
   }
 
-  render() {
+  resetState = () => {
+    return (
+      <App />
+    )
+  }
 
+  render() {
     return (
       <BrowserRouter>
         <main className="App">
@@ -69,7 +74,8 @@ class App extends Component {
             exact path="/areas" render={() => <DefaultContainer
             currentState={this.state}
             renderCondition='allAreas'
-            name='Neighborhoods'/> }
+            name='Neighborhoods'
+            initialState={this.resetState}/> }
           />
 
           <Route
@@ -82,6 +88,7 @@ class App extends Component {
               return <DefaultContainer
                 selectedArea={selectedArea}
                 renderCondition='selectedArea'
+                initialState={this.resetState}
               />
             }}
           />
