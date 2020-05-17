@@ -4,9 +4,7 @@ import './UserStayType.css';
 const UserStayType = ({ getPurpose }) => {
   const handleChange = (event) => {
     event.preventDefault();
-    if (event.target.id === event.target.id) {
-      getPurpose(event.target.id);
-    }
+    getPurpose(event.target.id);
   }
 
   return (
