@@ -33,6 +33,13 @@ const DefaultContainer = ({currentState, renderCondition, selectedArea, resetSta
       listingDetails={listingDetails}
       renderCondition={renderCondition}
       addPropertyToFavorites={addPropertyToFavorites}/>
+  } else if (renderCondition === 'favorites') {
+    topContainer = <PageHeaderContainer
+      renderCondition={renderCondition}
+      resetState={resetState}/>
+    bottomContainer = <ListingDetailsContainer
+      currentState={currentState}
+      renderCondition={renderCondition}
   }
 
   return (
