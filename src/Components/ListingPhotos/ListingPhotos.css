@@ -1,0 +1,6 @@
+.listingPhotos {
+  border: 2px solid purple;
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+}
