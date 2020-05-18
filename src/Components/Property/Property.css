@@ -9,5 +9,11 @@
 }
 
 .property {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
+.defaultListingImage {
+  width: 95%;
 }

@@ -23,6 +23,7 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
       var details = listings.map(listing => {
         return (
           <Property
+          selectedArea={selectedArea}
           name={listing.name}
           areaID={listing.area_id}
           listingID={listing.listing_id}/>
@@ -33,7 +34,7 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
     return (
       <section className="listingDetailsContainer">
         <section className="allListingDetails">
-          <ListingPhotos listingPhotos={listingDetails}/>
+          <ListingPhotos listingDetails={listingDetails}/>
           <ListingDetails
             name={details.name}
             address={details.address}
