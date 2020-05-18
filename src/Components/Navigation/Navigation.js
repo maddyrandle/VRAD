@@ -9,9 +9,14 @@ const Navigation = (props) => {
     props.resetState();
   }
 
+  const handleFavorites = () => {
+    console.log('hereoooo')
+  }
+
   return (
     <nav>
       <Link to={ '/' } className="signOutBtn" onClick={ handleSignOut }>Sign Out</Link>
+      <Link to={ '/favorites' } className="favoritesBtn" onClick={ handleFavorites }>Favorites</Link>
     </nav>
   );
 }
