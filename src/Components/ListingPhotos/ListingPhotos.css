@@ -1,7 +1,13 @@
 .listingPhotos {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-right: .05rem solid black;
   display: flex;
   flex-direction: column;
-  margin: 2rem;
+  margin: 1rem 0 1rem 0;
+  overflow: scroll;
   width: 40rem;
+}
+
+.listingImage {
+  border: 2px solid white;
+  margin: 1rem;
 }

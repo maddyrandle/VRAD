@@ -33,14 +33,16 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
 
     return (
       <section className="listingDetailsContainer">
-        <ListingPhotos />
-        <ListingDetails
-          name={details.name}
-          address={details.address}
-          beds={details.details.beds}
-          baths={details.details.baths}
-          costPerNight={details.details.cost_per_night}
-          features={details.details.features} />
+        <section className="allListingDetails">
+          <ListingPhotos />
+          <ListingDetails
+            name={details.name}
+            address={details.address}
+            beds={details.details.beds}
+            baths={details.details.baths}
+            costPerNight={details.details.cost_per_night}
+            features={details.details.features} />
+        </section>
       </section>
     )
   }

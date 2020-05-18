@@ -4,8 +4,12 @@ import './ListingPhotos.css'
 const ListingPhotos = () => {
   return (
     <section className="listingPhotos">
-      <h1>photos</h1>
-      <h1>photos</h1>
+      <h1 className="listingImage">photos</h1>
+      <h1 className="listingImage">photos</h1>
+      <h1 className="listingImage">photos</h1>
+      <h1 className="listingImage">photos</h1>
+      <h1 className="listingImage">photos</h1>
+      <h1 className="listingImage">photos</h1>
     </section>
   )
 }
