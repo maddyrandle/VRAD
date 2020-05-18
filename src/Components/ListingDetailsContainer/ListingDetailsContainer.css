@@ -1,6 +1,5 @@
 .listingDetailsContainer {
-  border: 1px solid black;
   display: flex;
-  justify-content: space-around;
-  overflow: scroll;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }

@@ -1,6 +1,25 @@
 .listingDetails {
-  border: 2px solid green;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: flex;
   flex-direction: column;
+  margin: 2rem;
+  height: 30rem;
   width: 40rem;
+}
+
+.propertyDetails {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  padding-left: 5rem;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: .5rem;
 }
