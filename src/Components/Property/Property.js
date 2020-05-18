@@ -2,18 +2,17 @@ import React from 'react';
 import './Property.css'
 import { Link } from 'react-router-dom'
 
-const Property = (props) => {
-  console.log('props: ', props.listing);
+const Property = ({name, areaID, listingID}) => {
+  console.log(name, areaID, listingID);
   return (
     <section className="propertyContainer">
       <div className='property'>
-        <p className="name">{props.listing.name}</p>
+        <p className="name">{name}</p>
         <p>IMAGE GOES HERE</p>
-        <button>More Details</button>
+        <Link to={ `/areas/${areaID}/listings/${listingID}` } className="propertyBtn" id={listingID}>More Details</Link>
       </div>
     </section>
   )
 }
-// <Link to={`/areas/${id}/listings`} className="propertyBtn" id={id}>More Details</Link>
 
 export default Property;
