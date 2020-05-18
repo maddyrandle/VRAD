@@ -1,10 +1,11 @@
 import React from 'react';
 import './ListingPhotos.css'
 
-const ListingPhotos = ({selectedArea}) => {
+const ListingPhotos = ({listingPhotos}) => {
+  let imagesArray = `url('public/Images/images/${listingPhotos.listings_id}_a')`
   return (
     <section className="listingPhotos">
-      {console.log(selectedArea)}
+      {imagesArray}
       <h1 className="listingImage">photos</h1>
       <h1 className="listingImage">photos</h1>
       <h1 className="listingImage">photos</h1>

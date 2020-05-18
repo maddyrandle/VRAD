@@ -30,11 +30,10 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
       })
   } else if (renderCondition === 'listingDetails') {
     var details = listingDetails;
-
     return (
       <section className="listingDetailsContainer">
         <section className="allListingDetails">
-          <ListingPhotos selectedArea={selectedArea}/>
+          <ListingPhotos listingPhotos={listingDetails}/>
           <ListingDetails
             name={details.name}
             address={details.address}
