@@ -9,9 +9,10 @@ const PageHeaderContainer = ({ currentState, renderCondition, selectedArea, rese
   let topContainer;
   if (renderCondition === 'allAreas') {
     topContainer = <LandingPageGreeting currentState={currentState}/>
-  } else if (renderCondition === 'selectedArea') {
+  } else if (renderCondition === 'selectedArea' || renderCondition === 'listingDetails') {
     topContainer = <SelectedNeighboodDetails selectedArea={selectedArea}/>
   }
+
   return (
     <React.Fragment>
       {topContainer}
