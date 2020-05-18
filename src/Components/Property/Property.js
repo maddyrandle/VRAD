@@ -3,7 +3,7 @@ import './Property.css'
 import { Link } from 'react-router-dom'
 
 const Property = ({name, areaID, listingID, selectedArea}) => {
-  // var listingImg = `/Images/${listingDetails.listing_id}_a.jpg`
+  var listingImg = `/Images/${listingID}_a.jpg`
   console.log(selectedArea.details.listings);
   console.log(areaID);
   console.log(listingID);
@@ -12,6 +12,7 @@ const Property = ({name, areaID, listingID, selectedArea}) => {
       <div className='property'>
         <p className="name">{name}</p>
         <p>IMAGE GOES HERE</p>
+        <img src={`${listingImg}`} className='listingImage' />
         <Link to={ `/areas/${areaID}/listings/${listingID}` } className="propertyBtn" areaID={areaID} listingID={listingID}>More Details</Link>
       </div>
     </section>
