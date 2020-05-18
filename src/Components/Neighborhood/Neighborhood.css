@@ -1,8 +1,6 @@
 .neighborhoodContainer {
   border: 2px solid red;
   display: flex;
-  flex-direction: row;
-
   overflow: scroll;
   scroll-behavior: smooth;
 }
@@ -12,3 +10,4 @@
   flex-direction: column;
   justify-content: space-around;
 }
+/* commit comments */
