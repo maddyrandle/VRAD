@@ -3,7 +3,7 @@ import PageHeaderContainer from '../PageHeaderContainer/PageHeaderContainer'
 import ListingDetailsContainer from '../ListingDetailsContainer/ListingDetailsContainer'
 import './DefaultContainer.css'
 
-const DefaultContainer = ({currentState, renderCondition, selectedArea, resetState}) => {
+const DefaultContainer = ({currentState, renderCondition, selectedArea, resetState, listingDetails}) => {
   let topContainer;
   let bottomContainer;
 
@@ -22,6 +22,15 @@ const DefaultContainer = ({currentState, renderCondition, selectedArea, resetSta
       resetState={resetState}/>
     bottomContainer = <ListingDetailsContainer
       selectedArea={selectedArea}
+      renderCondition={renderCondition}/>
+  }
+  else if (renderCondition === 'listingDetails') {
+    topContainer = <PageHeaderContainer
+      selectedArea={selectedArea}
+      renderCondition={renderCondition}
+      resetState={resetState}/>
+    bottomContainer = <ListingDetailsContainer
+      listingDetails={listingDetails}
       renderCondition={renderCondition}/>
   }
 
