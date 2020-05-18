@@ -34,7 +34,7 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
     return (
       <section className="listingDetailsContainer">
         <section className="allListingDetails">
-          <ListingPhotos />
+          <ListingPhotos selectedArea={selectedArea}/>
           <ListingDetails
             name={details.name}
             address={details.address}
