@@ -62,8 +62,18 @@ class App extends Component {
     )
   }
 
-  render() {
+  addPropertyToFavorites = (areaid, listingid) => {
+    let foundArea = this.state.areas.areas.find(area => area.details.id === areaid);
+    let favoritedListing = foundArea.details.listings.find(listing => listing.listing_id === listingid);
+    let addProperty = () => this.state.favorites.push(favoritedListing);
+    addProperty();
 
+    this.setState({
+      favorites: this.state.favorites
+    });
+  }
+
+  render() {
     return (
       <BrowserRouter>
         <main className="App">
@@ -114,6 +124,7 @@ class App extends Component {
                 listingDetails={listingDetails}
                 renderCondition='listingDetails'
                 resetState={this.resetState}
+                addPropertyToFavorites={this.addPropertyToFavorites}
               />
             }}
           />
