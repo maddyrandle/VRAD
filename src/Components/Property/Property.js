@@ -2,7 +2,11 @@ import React from 'react';
 import './Property.css'
 import { Link } from 'react-router-dom'
 
-const Property = ({name, areaID, listingID}) => {
+const Property = ({name, areaID, listingID, selectedArea}) => {
+  // var listingImg = `/Images/${listingDetails.listing_id}_a.jpg`
+  console.log(selectedArea.details.listings);
+  console.log(areaID);
+  console.log(listingID);
   return (
     <section className="propertyContainer">
       <div className='property'>
