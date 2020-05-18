@@ -1,0 +1,25 @@
+.listingDetails {
+  display: flex;
+  flex-direction: column;
+  height: 30rem;
+  margin: 1rem 0 1rem 0;
+  overflow: scroll;
+  width: 40rem;
+}
+
+.propertyDetails {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  padding-left: 5rem;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: .5rem;
+}

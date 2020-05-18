@@ -1,0 +1,13 @@
+.listingPhotos {
+  border-right: .05rem solid black;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0 1rem 0;
+  overflow: scroll;
+  width: 40rem;
+}
+
+.listingImage {
+  border: 2px solid white;
+  margin: 1rem;
+}

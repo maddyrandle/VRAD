@@ -4,17 +4,19 @@ import Navigation from '../Navigation/Navigation';
 import SelectedNeighboodDetails from '../SelectedNeighborhoodDetails/SelectedNeighborhoodDetails'
 import './PageHeaderContainer.css';
 
-const PageHeaderContainer = ({ currentState, renderCondition, selectedArea }) => {
+const PageHeaderContainer = ({ currentState, renderCondition, selectedArea, resetState }) => {
+
   let topContainer;
   if (renderCondition === 'allAreas') {
     topContainer = <LandingPageGreeting currentState={currentState}/>
-  } else if (renderCondition === 'selectedArea') {
+  } else if (renderCondition === 'selectedArea' || renderCondition === 'listingDetails') {
     topContainer = <SelectedNeighboodDetails selectedArea={selectedArea}/>
   }
+
   return (
     <React.Fragment>
       {topContainer}
-      <Navigation />
+      <Navigation resetState={resetState}/>
     </React.Fragment>
   );
 }

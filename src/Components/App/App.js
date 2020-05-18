@@ -19,20 +19,26 @@ class App extends Component {
   }
 
   componentDidMount = async () => {
+    let listings;
     let availableAreaResponse = await fetch('https://vrad-api.herokuapp.com/api/v1/areas')
     let availableAreaData = await availableAreaResponse.json()
 
     availableAreaData.areas.map(async (area) => {
       var fullAreaResponse = await fetch(`https://vrad-api.herokuapp.com${area.details}`)
-      var fullAreaDetails =  await fullAreaResponse.json()
+      var fullAreaDetails =  await fullAreaResponse.json();
       area.details = fullAreaDetails
 
-    area.details.listings.map(async (listing) => {
-      let listingResponse = await fetch(`https://vrad-api.herokuapp.com${listing}`)
-      let fullListingData = await listingResponse.json()
-      area.details.listings = fullListingData
+      Object.keys(area.details).forEach(detailsProperty => {
+        if (detailsProperty === 'listings') {
+          area.details[detailsProperty].map(async (listing, index) => {
+            let listingResponse = await fetch(`https://vrad-api.herokuapp.com${listing}`)
+            let fullListingData = await listingResponse.json()
+            area.details[detailsProperty].splice(index, 1, fullListingData)
+          })
+        }
+      })
     })
-    })
+
     await this.setState({
      areas: availableAreaData
     })
@@ -48,6 +54,12 @@ class App extends Component {
 
   setUserName = (username) => {
     this.setState({ user: username})
+  }
+
+  resetState = () => {
+    return (
+      <App />
+    )
   }
 
   render() {
@@ -69,7 +81,8 @@ class App extends Component {
             exact path="/areas" render={() => <DefaultContainer
             currentState={this.state}
             renderCondition='allAreas'
-            name='Neighborhoods'/> }
+            name='Neighborhoods'
+            resetState={this.resetState}/> }
           />
 
           <Route
@@ -82,13 +95,36 @@ class App extends Component {
               return <DefaultContainer
                 selectedArea={selectedArea}
                 renderCondition='selectedArea'
+                resetState={this.resetState}
               />
             }}
           />
+
+          <Route
+            path='/areas/:areaID/listings/:listingID'
+            exact render={({ match }) => {
+              let selectedArea = this.state.areas.areas.find(area => {
+                return parseInt(area.details.id) === parseInt(match.params.areaID)
+              })
+              let listingDetails = selectedArea.details.listings.find(listing => {
+                return parseInt(match.params.listingID) === parseInt(listing.listing_id)
+              })
+              return <DefaultContainer
+                selectedArea={selectedArea}
+                listingDetails={listingDetails}
+                renderCondition='listingDetails'
+                resetState={this.resetState}
+              />
+            }}
+          />
+
         </main>
       </BrowserRouter>
     );
   }
 }
+
+
+
 
 export default App;
