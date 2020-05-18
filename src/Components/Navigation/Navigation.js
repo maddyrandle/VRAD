@@ -5,7 +5,6 @@ import './Navigation.css';
 
 
 const Navigation = (props) => {
-
   const handleSignOut = () => {
     props.resetState();
   }
@@ -16,7 +15,5 @@ const Navigation = (props) => {
     </nav>
   );
 }
-
-// change button css to link className
 
 export default Navigation;
