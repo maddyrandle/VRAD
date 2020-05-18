@@ -63,6 +63,7 @@ class App extends Component {
   }
 
   render() {
+
     return (
       <BrowserRouter>
         <main className="App">
@@ -92,17 +93,38 @@ class App extends Component {
                 return area.details.id === parseInt(id)
               })
               return <DefaultContainer
-
                 selectedArea={selectedArea}
                 renderCondition='selectedArea'
                 resetState={this.resetState}
               />
             }}
           />
+
+          <Route
+            path='/areas/:areaID/listings/:listingID'
+            exact render={({ match }) => {
+              let selectedArea = this.state.areas.areas.find(area => {
+                return parseInt(area.details.id) === parseInt(match.params.areaID)
+              })
+              let listingDetails = selectedArea.details.listings.find(listing => {
+                return parseInt(match.params.listingID) === parseInt(listing.listing_id)
+              })
+              return <DefaultContainer
+                selectedArea={selectedArea}
+                listingDetails={listingDetails}
+                renderCondition='listingDetails'
+                resetState={this.resetState}
+              />
+            }}
+          />
+
         </main>
       </BrowserRouter>
     );
   }
 }
+
+
+
 
 export default App;
