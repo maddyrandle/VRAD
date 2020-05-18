@@ -20,7 +20,10 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea}) 
     let listings = selectedArea.details.listings;
     var details = listings.map(listing => {
       return (
-        <Property listing={listing} />
+        <Property
+        name={listing.name}
+        areaID={listing.area_id}
+        listingID={listing.listing_id}/>
       )
     })
 
