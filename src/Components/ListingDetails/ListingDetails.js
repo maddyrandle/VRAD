@@ -1,9 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropertyFeatures from '../PropertyFeatures/PropertyFeatures';
 import './ListingDetails.css'
 
+const ListingDetails = ({areaid, listingid, name, address, beds, baths, costPerNight, features, addPropertyToFavorites}) => {
+  const handleFarovite = () => {
+    addPropertyToFavorites(areaid, listingid)
 
-const ListingDetails = ({name, address, beds, baths, costPerNight, features}) => {
+  }
+
   return (
     <section className="listingDetails">
       <h2>{name}</h2>
@@ -14,9 +19,9 @@ const ListingDetails = ({name, address, beds, baths, costPerNight, features}) =>
         <li>{costPerNight.toLocaleString("en-US", {style: "currency", currency: "USD"})} Per Night</li>
         <li>Features will go here</li>
       </ul>
+      <Link to={ '/' } className="favoritePropertyBtn" onClick={ handleFarovite }>Favorite this Property</Link>
     </section>
   )
 }
-// <p>Features: { <PropertyFeatures features={features}/> }</p>
 
 export default ListingDetails;
