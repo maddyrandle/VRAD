@@ -1,5 +1,6 @@
 import React from 'react';
 import Neighborhood from '../Neighborhood/Neighborhood';
+import Property from '../Property/Property';
 import css from './ListingDetailsContainer.css'
 
 const ListingDetailsContainer = ({currentState, renderCondition, selectedArea}) => {
@@ -16,7 +17,14 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea}) 
       })
     })
   } else if(renderCondition === 'selectedArea'){
-    console.log('This is where Property goes');
+    let listings = selectedArea.details.listings;
+    var details = listings.map(listing => {
+      return (
+        <Property listing={listing} />
+      )
+    })
+
+
   }
 
   return (
