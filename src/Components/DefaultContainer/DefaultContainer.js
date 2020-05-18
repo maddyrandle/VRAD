@@ -8,11 +8,21 @@ const DefaultContainer = ({currentState, renderCondition, selectedArea, resetSta
   let bottomContainer;
 
   if(renderCondition === 'allAreas') {
-    topContainer = <PageHeaderContainer currentState={currentState} renderCondition={renderCondition} resetState={resetState}/>
-    bottomContainer = <ListingDetailsContainer currentState={currentState} renderCondition={renderCondition}/>
+    topContainer = <PageHeaderContainer
+      currentState={currentState}
+      renderCondition={renderCondition}
+      resetState={resetState}/>
+    bottomContainer = <ListingDetailsContainer
+      currentState={currentState}
+      renderCondition={renderCondition}/>
   } else if (renderCondition === 'selectedArea') {
-    topContainer = <PageHeaderContainer selectedArea={selectedArea} renderCondition={renderCondition} resetState={resetState}/>
-    bottomContainer = <ListingDetailsContainer selectedArea={selectedArea} renderCondition={renderCondition}/>
+    topContainer = <PageHeaderContainer
+      selectedArea={selectedArea}
+      renderCondition={renderCondition}
+      resetState={resetState}/>
+    bottomContainer = <ListingDetailsContainer
+      selectedArea={selectedArea}
+      renderCondition={renderCondition}/>
   }
 
   return (
