@@ -129,6 +129,14 @@ class App extends Component {
             }}
           />
 
+          <Route
+            exact path="/favorites" render={() => <DefaultContainer
+            currentState={this.state}
+            renderCondition='favorites'
+            name='Favorites'
+            resetState={this.resetState}/> }
+          />
+
         </main>
       </BrowserRouter>
     );
