@@ -3,7 +3,7 @@ import PageHeaderContainer from '../PageHeaderContainer/PageHeaderContainer'
 import ListingDetailsContainer from '../ListingDetailsContainer/ListingDetailsContainer'
 import './DefaultContainer.css'
 
-const DefaultContainer = ({currentState, renderCondition, selectedArea, resetState, listingDetails, addPropertyToFavorites}) => {
+const DefaultContainer = ({currentState, renderCondition, selectedArea, resetState, listingDetails, addPropertyToFavorites, getData}) => {
   let topContainer;
   let bottomContainer;
 
@@ -11,7 +11,8 @@ const DefaultContainer = ({currentState, renderCondition, selectedArea, resetSta
     topContainer = <PageHeaderContainer
       currentState={currentState}
       renderCondition={renderCondition}
-      resetState={resetState}/>
+      resetState={resetState}
+      getData={getData} />
     bottomContainer = <ListingDetailsContainer
       currentState={currentState}
       renderCondition={renderCondition}/>
@@ -19,7 +20,8 @@ const DefaultContainer = ({currentState, renderCondition, selectedArea, resetSta
     topContainer = <PageHeaderContainer
       selectedArea={selectedArea}
       renderCondition={renderCondition}
-      resetState={resetState}/>
+      resetState={resetState}
+      getData={getData} />
     bottomContainer = <ListingDetailsContainer
       selectedArea={selectedArea}
       renderCondition={renderCondition}/>
@@ -28,7 +30,8 @@ const DefaultContainer = ({currentState, renderCondition, selectedArea, resetSta
     topContainer = <PageHeaderContainer
       selectedArea={selectedArea}
       renderCondition={renderCondition}
-      resetState={resetState}/>
+      resetState={resetState}
+      getData={getData} />
     bottomContainer = <ListingDetailsContainer
       listingDetails={listingDetails}
       renderCondition={renderCondition}
@@ -36,10 +39,11 @@ const DefaultContainer = ({currentState, renderCondition, selectedArea, resetSta
   } else if (renderCondition === 'favorites') {
     topContainer = <PageHeaderContainer
       renderCondition={renderCondition}
-      resetState={resetState}/>
+      resetState={resetState}
+      getData={getData} />
     bottomContainer = <ListingDetailsContainer
       currentState={currentState}
-      renderCondition={renderCondition}
+      renderCondition={renderCondition} />
   }
 
   return (
