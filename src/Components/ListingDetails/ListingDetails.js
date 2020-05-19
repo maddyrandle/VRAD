@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import PropertyFeatures from '../PropertyFeatures/PropertyFeatures';
 import './ListingDetails.css'
 
-const ListingDetails = ({areaid, listingid, name, address, beds, baths, costPerNight, features, addPropertyToFavorites}) => {
+const ListingDetails = ({areaid, listingid, name, address, beds, baths, costPerNight, features, handleFarovites}) => {
   const handleFarovite = () => {
-    addPropertyToFavorites(areaid, listingid)
+    handleFarovites(areaid, listingid)
   }
 
   return (
