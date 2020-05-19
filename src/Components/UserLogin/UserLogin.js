@@ -4,7 +4,7 @@ import './UserLogin.css';
 
 const UserLogin = (props) => {
   var errorMessage;
-  
+
 
   const updateUserName = (event) => {
     props.setUserName(event.target.value)
@@ -17,10 +17,11 @@ const UserLogin = (props) => {
     event.preventDefault();
     if(!props.validateUser || !props.validatePassword) {
       console.log(1);
-      errorMessage = 'Please enter a valid email & password'
+      console.log(errorMessage.innerHTML);
+       errorMessage = 'Please enter a valid email & password'
     } else if (!props.stayType) {
       console.log(2);
-      errorMessage = 'Please select a staytype'
+       errorMessage = 'Please select a staytype'
     }
     else {
       props.history.push('/areas')
@@ -43,7 +44,7 @@ const UserLogin = (props) => {
         />
         <button type="button" onClick={handleSubmit} placeholder='Submit'>Sign-In</button>
       </form>
-      <p className='errorMessage'>{errorMessage}</p>
+      <p className='errorMessage'>test</p>
 
     </section>
   );
