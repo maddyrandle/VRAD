@@ -66,18 +66,27 @@ class App extends Component {
         areas: [],
       })
     )
+  }
+
+  handleFarovites = (areaid, listingid) => {
+    let foundArea = this.state.areas.areas.find(area => area.details.id === areaid);
+    let favoritedListing = foundArea.details.listings.find(listing => listing.listing_id === listingid);
+
+    this.addPropertyToFavorites(favoritedListing);
 
   }
 
-  addPropertyToFavorites = (areaid, listingid) => {
-    let foundArea = this.state.areas.areas.find(area => area.details.id === areaid);
-    let favoritedListing = foundArea.details.listings.find(listing => listing.listing_id === listingid);
+  addPropertyToFavorites = (favoritedListing) => {
     let addProperty = () => this.state.favorites.push(favoritedListing);
     !this.state.favorites.includes(favoritedListing) && addProperty();
 
     this.setState({
       favorites: this.state.favorites
     });
+  }
+
+  removePropertyFromFavorites = () => {
+
   }
 
   render() {
@@ -136,7 +145,7 @@ class App extends Component {
                 renderCondition='listingDetails'
                 resetState={this.resetState}
                 getData={this.componentDidMount}
-                addPropertyToFavorites={this.addPropertyToFavorites}
+                handleFarovites={this.handleFarovites}
               />
             }}
           />
