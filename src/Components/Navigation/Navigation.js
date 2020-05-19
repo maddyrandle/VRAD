@@ -5,7 +5,7 @@ import './Navigation.css';
 
 
 const Navigation = (props) => {
-
+  const numFavorites = props.currentState.favorites.length;
   const handleSignOut = () => {
     props.resetState();
     props.getData();
@@ -14,7 +14,8 @@ const Navigation = (props) => {
   return (
     <nav>
       <Link to={ '/' } className="signOutBtn" onClick={ handleSignOut }>Sign Out</Link>
-      <Link to={ '/favorites' } className="favoritesBtn">Favorites</Link>
+
+      <Link to={ '/favorites' } className="favoritesBtn">Favorites ({numFavorites})</Link>
     </nav>
   );
 }
