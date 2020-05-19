@@ -6,7 +6,6 @@ import './ListingDetails.css'
 const ListingDetails = ({areaid, listingid, name, address, beds, baths, costPerNight, features, addPropertyToFavorites}) => {
   const handleFarovite = () => {
     addPropertyToFavorites(areaid, listingid)
-
   }
 
   return (
