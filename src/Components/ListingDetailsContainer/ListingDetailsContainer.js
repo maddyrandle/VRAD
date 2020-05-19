@@ -6,7 +6,7 @@ import ListingDetails from '../ListingDetails/ListingDetails';
 import FavoriteListingsDetails from '../FavoriteListingsDetails/FavoriteListingsDetails';
 import css from './ListingDetailsContainer.css'
 
-const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, listingDetails, addPropertyToFavorites}) => {
+const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, listingDetails, handleFarovites}) => {
   if (renderCondition === 'allAreas') {
     let areaValues = Object.values(currentState.areas)
     var details = areaValues.map(areas => {
@@ -44,7 +44,7 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
             baths={details.details.baths}
             costPerNight={details.details.cost_per_night}
             features={details.details.features}
-            addPropertyToFavorites={addPropertyToFavorites}/>
+            handleFarovites={handleFarovites}/>
         </section>
       </section>
     )
