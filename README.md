@@ -1,9 +1,9 @@
-# VRAD - Vacation Rentals Around Denver
+# VRAD: Vacation Rentals Around Denver
 
 ## Team Members:
-[Madison Randle GitHub](https://github.com/madisonrandle)
+Madison Randle - [GitHub](https://github.com/madisonrandle)
 
-[Justin Corbin GitHub](https://github.com/Corbinj22)
+Justin Corbin - [GitHub](https://github.com/Corbinj22)
 
 ## Abstract
 
