@@ -2,52 +2,57 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
 import './UserLogin.css';
 
-const UserLogin = (props) => {
-  var errorMessage;
-
-
-  const updateUserName = (event) => {
-    props.setUserName(event.target.value)
+class UserLogin extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      errorMessage : ''
+    }
   }
-  const updatePassword = (event) => {
-    props.setPassword(event.target.value)
+  updateUserName = (event) => {
+    this.props.setUserName(event.target.value)
   }
-
-  const handleSubmit = (event) => {
+  updatePassword = (event) => {
+    this.props.setPassword(event.target.value)
+  }
+  handleSubmit = (event) => {
     event.preventDefault();
-    if(!props.validateUser || !props.validatePassword) {
+    if(!this.props.validateUser || !this.props.validatePassword) {
       console.log(1);
-      console.log(errorMessage.innerHTML);
-       errorMessage = 'Please enter a valid email & password'
-    } else if (!props.stayType) {
+       this.setState({
+         errorMessage : 'Please enter a valid email & password'
+       })
+    } else if (!this.props.stayType) {
       console.log(2);
-       errorMessage = 'Please select a staytype'
+      this.setState({
+        errorMessage : 'Please select a staytype'
+      })
     }
     else {
-      props.history.push('/areas')
+      this.props.history.push('/areas')
     }
   }
-
+  render() {
   return (
     <section>
       <p className="UserLoginTitle">Login Below</p>
       <form>
-        <input onChange={ updateUserName }
+        <input onChange={ this.updateUserName }
           placeholder="username"
           type="text"
           name="username"
         />
-        <input onChange={ updatePassword }
+        <input onChange={ this.updatePassword }
           placeholder="password"
           type="password"
           name="password"
         />
-        <button type="button" onClick={handleSubmit} placeholder='Submit'>Sign-In</button>
       </form>
-      <p className='errorMessage'>test</p>
-
+      <button type="button" onClick={this.handleSubmit} placeholder='Submit'>Sign-In</button>
+      <p className='errorMessage'>{this.state.errorMessage}</p>
     </section>
   );
+}
 }
 
 export default withRouter(UserLogin);
