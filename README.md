@@ -1,15 +1,15 @@
 # VRAD - Vacation Rentals Around Denver
 
 ## Team Members:
-[Madison Randle](https://github.com/madisonrandle)
+[Madison Randle GitHub](https://github.com/madisonrandle)
 
-[Justin Corbin](https://github.com/Corbinj22)
+[Justin Corbin GitHub](https://github.com/Corbinj22)
 
 ## Abstract
 **Technologies Used:**
 *React*, *React Router*, *Fetch API for receiving 3rd party data*, *ES6*, *CSS*, *TDD*
 
-VRAD is an appication we built during our time at [Turing School of Softwar and Design](http://turing.io). Blah blah blah blah...................... Goals, struggles, etc. 
+VRAD is an appication we built during our time at [Turing School of Softwar and Design](http://turing.io). Mention how long we had, overview summary of project goals, struggles (?), etc. 
 
 ## Setup
 1. clone down this repo to desired location
