@@ -73,7 +73,7 @@ class App extends Component {
     let foundArea = this.state.areas.areas.find(area => area.details.id === areaid);
     let favoritedListing = foundArea.details.listings.find(listing => listing.listing_id === listingid);
     let addProperty = () => this.state.favorites.push(favoritedListing);
-    addProperty();
+    !this.state.favorites.includes(favoritedListing) && addProperty();
 
     this.setState({
       favorites: this.state.favorites
