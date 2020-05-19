@@ -58,8 +58,15 @@ class App extends Component {
 
   resetState = () => {
     return (
-      <App />
+      this.setState({
+        user: '',
+        favorites: [],
+        password: '',
+        stayType: '',
+        areas: [],
+      })
     )
+
   }
 
   addPropertyToFavorites = (areaid, listingid) => {
@@ -92,7 +99,8 @@ class App extends Component {
             currentState={this.state}
             renderCondition='allAreas'
             name='Neighborhoods'
-            resetState={this.resetState}/> }
+            resetState={this.resetState}
+            getData={this.componentDidMount} /> }
           />
 
           <Route
@@ -106,6 +114,7 @@ class App extends Component {
                 selectedArea={selectedArea}
                 renderCondition='selectedArea'
                 resetState={this.resetState}
+                getData={this.componentDidMount}
               />
             }}
           />
@@ -124,6 +133,7 @@ class App extends Component {
                 listingDetails={listingDetails}
                 renderCondition='listingDetails'
                 resetState={this.resetState}
+                getData={this.componentDidMount}
                 addPropertyToFavorites={this.addPropertyToFavorites}
               />
             }}
@@ -133,8 +143,8 @@ class App extends Component {
             exact path="/favorites" render={() => <DefaultContainer
             currentState={this.state}
             renderCondition='favorites'
-            name='Favorites'
-            resetState={this.resetState}/> }
+            getData={this.componentDidMount}
+            resetState={this.resetState} /> }
           />
 
         </main>
