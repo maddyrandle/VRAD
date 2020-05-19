@@ -5,8 +5,10 @@ import './Navigation.css';
 
 
 const Navigation = (props) => {
+
   const handleSignOut = () => {
     props.resetState();
+    props.getData();
   }
 
   const handleFavorites = () => {
