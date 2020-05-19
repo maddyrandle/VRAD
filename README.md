@@ -1,19 +1,32 @@
+# VRAD - Vacation Rentals Around Denver
+
 ## Team Members:
 [Madison Randle](https://github.com/madisonrandle)
 
 [Justin Corbin](https://github.com/Corbinj22)
 
 ## Abstract
+**Technologies Used:**
+*React*, *React Router*, *Fetch API for receiving 3rd party data*, *ES6*, *CSS*, *TDD*
 
+VRAD is an appication we built during our time at [Turing School of Softwar and Design](http://turing.io). Blah blah blah blah...................... Goals, struggles, etc. 
 
 ## Setup
 1. clone down this repo to desired location
 2. `cd` into the new directory
 3. run `npm install`
 4. run `npm start`
-5. open browser and enter `http://localhost:8080/`
+5. Open localhost:3000 in your favorite browser (unless your terminal says otherwise)
 
-## App Screenshot
-[Description of screen-shot]()
+## App Screenshots
+### Login Page
+[Login Page Picture]()
 
-## Next Steps
+### The Areas Page
+[Login Page Picture]()
+
+### The Listings Page
+[Login Page Picture]()
+
+## Animation
+![Login page animation]()
