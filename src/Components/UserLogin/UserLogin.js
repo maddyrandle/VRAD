@@ -9,7 +9,7 @@ class UserLogin extends Component {
       errorMessage : ''
     }
   }
-  
+
   updateUserName = (event) => {
     this.props.setUserName(event.target.value)
   }
@@ -58,13 +58,3 @@ class UserLogin extends Component {
 }
 
 export default withRouter(UserLogin);
-
-
-// <Link to={() => {if (!props.stayType || !props.validateUser || !props.validatePassword) {
-  //   return '/'
-  // } else {
-    //   return '/areas'
-    // }
-    // }}
-    //   className="UserLoginBtn">Login
-    // </Link>
