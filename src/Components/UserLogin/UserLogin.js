@@ -9,12 +9,15 @@ class UserLogin extends Component {
       errorMessage : ''
     }
   }
+  
   updateUserName = (event) => {
     this.props.setUserName(event.target.value)
   }
+
   updatePassword = (event) => {
     this.props.setPassword(event.target.value)
   }
+
   handleSubmit = (event) => {
     event.preventDefault();
     if(!this.props.validateUser || !this.props.validatePassword) {
@@ -30,6 +33,7 @@ class UserLogin extends Component {
       this.props.history.push('/areas')
     }
   }
+
   render() {
   return (
     <section>
