@@ -111,6 +111,7 @@ class App extends Component {
                 return area.details.id === parseInt(id)
               })
               return <DefaultContainer
+                currentState={this.state}
                 selectedArea={selectedArea}
                 renderCondition='selectedArea'
                 resetState={this.resetState}
@@ -129,6 +130,7 @@ class App extends Component {
                 return parseInt(match.params.listingID) === parseInt(listing.listing_id)
               })
               return <DefaultContainer
+                currentState={this.state}
                 selectedArea={selectedArea}
                 listingDetails={listingDetails}
                 renderCondition='listingDetails'
