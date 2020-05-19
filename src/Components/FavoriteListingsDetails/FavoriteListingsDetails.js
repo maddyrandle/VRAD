@@ -9,7 +9,7 @@ const FavoriteListingsDetails = ({ favorites }) => {
     )
   } else {
     return (
-      <h1>Render those Maddy!</h1>
+      <h1>hi</h1>
     )
   }
 }
