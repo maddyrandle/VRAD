@@ -50,10 +50,21 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
     )
   } else if (renderCondition === 'favorites') {
     var details = currentState.favorites;
+
+
     return (
       <section className="listingDetailsContainer">
         <section className="allFavoriteListings">
-          <FavoriteListingsDetails favorites={details}/>
+        {
+          details.map(favorite => {
+            return ( <FavoriteListingsDetails
+              favorites={details}
+              name={favorite.name}
+              areaid={favorite.area_id}
+              listingid={favorite.listing_id}
+            /> )
+          })
+        }
         </section>
       </section>
     )
