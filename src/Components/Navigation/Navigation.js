@@ -11,14 +11,10 @@ const Navigation = (props) => {
     props.getData();
   }
 
-  const handleFavorites = () => {
-    console.log('hereoooo')
-  }
-
   return (
     <nav>
       <Link to={ '/' } className="signOutBtn" onClick={ handleSignOut }>Sign Out</Link>
-      <Link to={ '/favorites' } className="favoritesBtn" onClick={ handleFavorites }>Favorites</Link>
+      <Link to={ '/favorites' } className="favoritesBtn">Favorites</Link>
     </nav>
   );
 }
