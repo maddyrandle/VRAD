@@ -73,7 +73,6 @@ class App extends Component {
     let favoritedListing = foundArea.details.listings.find(listing => listing.listing_id === listingid);
 
     this.addPropertyToFavorites(favoritedListing);
-
   }
 
   addPropertyToFavorites = (favoritedListing) => {
