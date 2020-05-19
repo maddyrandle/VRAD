@@ -170,7 +170,8 @@ class App extends Component {
             currentState={this.state}
             renderCondition='favorites'
             getData={this.componentDidMount}
-            resetState={this.resetState} /> }
+            resetState={this.resetState}
+            handleFarovites={this.handleFarovites} /> }
           />
 
         </main>
