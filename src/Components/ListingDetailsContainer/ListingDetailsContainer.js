@@ -51,23 +51,31 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
   } else if (renderCondition === 'favorites') {
     var details = currentState.favorites;
 
-
-    return (
-      <section className="listingDetailsContainer">
-        <section className="allFavoriteListings">
-        {
-          details.map(favorite => {
-            return ( <FavoriteListingsDetails
-              favorites={details}
-              name={favorite.name}
-              areaid={favorite.area_id}
-              listingid={favorite.listing_id}
-            /> )
-          })
-        }
+    if (!details.length) {
+      return (
+        <p>You do not have any listings saved.</p>
+      )
+    } else {
+      return (
+        <section className="listingDetailsContainer">
+          <section className="allFavoriteListings">
+          {
+            details.map(favorite => {
+              return ( <FavoriteListingsDetails
+                favorites={details}
+                name={favorite.name}
+                areaid={favorite.area_id}
+                listingid={favorite.listing_id}
+                handleFarovites={handleFarovites}
+              /> )
+            })
+          }
+          </section>
         </section>
-      </section>
-    )
+      )
+    }
+
+
   }
 
   return (
