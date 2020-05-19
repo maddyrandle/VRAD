@@ -46,7 +46,8 @@ const DefaultContainer = ({currentState, renderCondition, selectedArea, resetSta
       getData={getData} />
     bottomContainer = <ListingDetailsContainer
       currentState={currentState}
-      renderCondition={renderCondition} />
+      renderCondition={renderCondition}
+      handleFarovites={handleFarovites} />
   }
 
   return (
