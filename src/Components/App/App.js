@@ -72,7 +72,12 @@ class App extends Component {
     let foundArea = this.state.areas.areas.find(area => area.details.id === areaid);
     let favoritedListing = foundArea.details.listings.find(listing => listing.listing_id === listingid);
 
-    this.addPropertyToFavorites(favoritedListing);
+
+    if (!this.state.favorites.includes(favoritedListing)) {
+      this.addPropertyToFavorites(favoritedListing);
+    } else {
+      this.removePropertyFromFavorites(favoritedListing);
+    }
   }
 
   addPropertyToFavorites = (favoritedListing) => {
@@ -84,8 +89,19 @@ class App extends Component {
     });
   }
 
-  removePropertyFromFavorites = () => {
+  removePropertyFromFavorites = (favoritedListing) => {
+    let favoriteToRemoveIndex;
+    let favoriteToRemove = this.state.favorites.find((favorite, index) => {
+      favoriteToRemoveIndex = index;
 
+      return favorite.listing_id === favoritedListing.listing_id
+    })
+
+    this.state.favorites.splice(favoriteToRemoveIndex, 1);
+
+    this.setState({
+      favorites: this.state.favorites
+    });
   }
 
   render() {
