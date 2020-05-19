@@ -1,43 +1,60 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import './UserLogin.css';
 
-const UserLogin = (props) => {
-
-  const updateUserName = (event) => {
-    props.setUserName(event.target.value)
+class UserLogin extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      errorMessage : ''
+    }
   }
-  const updatePassword = (event) => {
-    props.setPassword(event.target.value)
+
+  updateUserName = (event) => {
+    this.props.setUserName(event.target.value)
   }
 
+  updatePassword = (event) => {
+    this.props.setPassword(event.target.value)
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    if(!this.props.validateUser || !this.props.validatePassword) {
+       this.setState({
+         errorMessage : 'Please enter a valid email & password'
+       })
+    } else if (!this.props.stayType) {
+      this.setState({
+        errorMessage : 'Please select a staytype'
+      })
+    }
+    else {
+      this.props.history.push('/areas')
+    }
+  }
+
+  render() {
   return (
     <section>
       <p className="UserLoginTitle">Login Below</p>
       <form>
-        <input onChange={ updateUserName }
+        <input onChange={ this.updateUserName }
           placeholder="username"
           type="text"
           name="username"
         />
-        <input onChange={ updatePassword }
+        <input onChange={ this.updatePassword }
           placeholder="password"
           type="password"
           name="password"
         />
       </form>
-
-      <Link to={() => {if (!props.stayType || !props.validateUser || !props.validatePassword) {
-        return '/'
-      } else {
-        return '/areas'
-      }
-      }}
-        className="UserLoginBtn">Login
-      </Link>
-
+      <button type="button" onClick={this.handleSubmit} placeholder='Submit'>Sign-In</button>
+      <p className='errorMessage'>{this.state.errorMessage}</p>
     </section>
   );
 }
+}
 
-export default UserLogin;
+export default withRouter(UserLogin);

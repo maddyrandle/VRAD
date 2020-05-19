@@ -1,15 +1,14 @@
 import React from 'react';
 import './ListingPhotos.css'
 
-const ListingPhotos = () => {
+const ListingPhotos = ({listingDetails}) => {
+  let imagesArray = [`/Images/${listingDetails.listing_id}_a.jpg`, `/Images/${listingDetails.listing_id}_b.jpg`, `/Images/${listingDetails.listing_id}_c.jpg`]
+  let listingImages = imagesArray.map(image => {
+    return (<img src={`${image}`} className='listingImage' />)
+  })
   return (
     <section className="listingPhotos">
-      <h1 className="listingImage">photos</h1>
-      <h1 className="listingImage">photos</h1>
-      <h1 className="listingImage">photos</h1>
-      <h1 className="listingImage">photos</h1>
-      <h1 className="listingImage">photos</h1>
-      <h1 className="listingImage">photos</h1>
+      {listingImages}
     </section>
   )
 }

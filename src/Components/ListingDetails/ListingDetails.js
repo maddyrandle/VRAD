@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import PropertyFeatures from '../PropertyFeatures/PropertyFeatures';
 import './ListingDetails.css'
 
 const ListingDetails = ({areaid, listingid, name, address, beds, baths, costPerNight, features, handleFarovites}) => {
@@ -16,11 +14,12 @@ return (
       <li>{beds} Beds</li>
       <li>{baths} Baths</li>
       <li>{costPerNight.toLocaleString("en-US", {style: "currency", currency: "USD"})} Per Night</li>
-      <li>Features will go here</li>
+      <li className="propertyFeatures">{features.join(', ')}</li>
     </ul>
     <button className="favoritePropertyBtn" onClick={ handleFarovite }>Favorite this Property</button>
   </section>
 )
 }
+
 
 export default ListingDetails;
