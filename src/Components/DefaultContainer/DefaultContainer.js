@@ -18,6 +18,7 @@ const DefaultContainer = ({currentState, renderCondition, selectedArea, resetSta
       renderCondition={renderCondition}/>
   } else if (renderCondition === 'selectedArea') {
     topContainer = <PageHeaderContainer
+      currentState={currentState}
       selectedArea={selectedArea}
       renderCondition={renderCondition}
       resetState={resetState}
@@ -28,6 +29,7 @@ const DefaultContainer = ({currentState, renderCondition, selectedArea, resetSta
   }
   else if (renderCondition === 'listingDetails') {
     topContainer = <PageHeaderContainer
+      currentState={currentState}
       selectedArea={selectedArea}
       renderCondition={renderCondition}
       resetState={resetState}
@@ -38,6 +40,7 @@ const DefaultContainer = ({currentState, renderCondition, selectedArea, resetSta
       addPropertyToFavorites={addPropertyToFavorites}/>
   } else if (renderCondition === 'favorites') {
     topContainer = <PageHeaderContainer
+      currentState={currentState}
       renderCondition={renderCondition}
       resetState={resetState}
       getData={getData} />
