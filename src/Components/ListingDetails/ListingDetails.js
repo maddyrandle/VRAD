@@ -19,7 +19,7 @@ const ListingDetails = ({areaid, listingid, name, address, beds, baths, costPerN
         <li>{costPerNight.toLocaleString("en-US", {style: "currency", currency: "USD"})} Per Night</li>
         <li>Features will go here</li>
       </ul>
-      <Link to={ '/' } className="favoritePropertyBtn" onClick={ handleFarovite }>Favorite this Property</Link>
+      <button className="favoritePropertyBtn" onClick={ handleFarovite }>Favorite this Property</button>
     </section>
   )
 }
