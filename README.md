@@ -20,13 +20,13 @@ VRAD is an appication we built during our time at [Turing School of Softwar and 
 
 ## App Screenshots
 ### Login Page
-[Login Page Picture]()
+[Picture of Login Page]()
 
-### The Areas Page
-[Login Page Picture]()
+### Neighborhoods Page
+[Picture of Neighborhoods Page]()
 
-### The Listings Page
-[Login Page Picture]()
+### Property Listings Page
+[Picture of Property Listings Page]()
 
 ## Animation
 [Login page animation]()
