@@ -3,6 +3,7 @@ import Neighborhood from '../Neighborhood/Neighborhood';
 import Property from '../Property/Property';
 import ListingPhotos from '../ListingPhotos/ListingPhotos';
 import ListingDetails from '../ListingDetails/ListingDetails';
+import FavoriteListingsDetails from '../FavoriteListingsDetails/FavoriteListingsDetails';
 import css from './ListingDetailsContainer.css'
 
 const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, listingDetails, addPropertyToFavorites}) => {
@@ -44,6 +45,15 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
             costPerNight={details.details.cost_per_night}
             features={details.details.features}
             addPropertyToFavorites={addPropertyToFavorites}/>
+        </section>
+      </section>
+    )
+  } else if (renderCondition === 'favorites') {
+    var details = currentState.favorites;
+    return (
+      <section className="listingDetailsContainer">
+        <section className="allFavoriteListings">
+          <FavoriteListingsDetails favorites={details}/>
         </section>
       </section>
     )
