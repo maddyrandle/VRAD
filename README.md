@@ -29,4 +29,4 @@ VRAD is an appication we built during our time at [Turing School of Softwar and 
 [Login Page Picture]()
 
 ## Animation
-![Login page animation]()
+[Login page animation]()
