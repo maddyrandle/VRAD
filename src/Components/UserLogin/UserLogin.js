@@ -18,12 +18,10 @@ class UserLogin extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     if(!this.props.validateUser || !this.props.validatePassword) {
-      console.log(1);
        this.setState({
          errorMessage : 'Please enter a valid email & password'
        })
     } else if (!this.props.stayType) {
-      console.log(2);
       this.setState({
         errorMessage : 'Please select a staytype'
       })
