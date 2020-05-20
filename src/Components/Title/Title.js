@@ -4,9 +4,9 @@ import './Title.css';
 const Title = () => {
   return (
     <header>
-      <h1>VRAD</h1>
-      <h3>Your One Stop For All</h3>
-      <h2>Vacation Rentals Around Denver</h2>
+      <h1 className="header">VRAD</h1>
+      <h3 className="subHeaderOne">Your One Stop For All</h3>
+      <h2 className="subHeaderTwo">Vacation Rentals Around Denver</h2>
     </header>
   );
 }

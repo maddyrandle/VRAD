@@ -1,15 +1,13 @@
 import React from 'react';
+import './SelectedNeighborhoodDetails.css';
 
-
-const SelectedNeighboodDetails = ({selectedArea}) => {
-
+const SelectedNeighborhoodDetails = ({selectedArea}) => {
   return (
-    <section>
-      <h2>{selectedArea.area}</h2>
-      <p>{selectedArea.details.about}</p>
+    <section className="subHeaderWrapper">
+      <h2 className="areaName">{selectedArea.area}</h2>
+      <p className="areaDetails">{selectedArea.details.about}</p>
     </section>
-
   )
 }
 
-export default SelectedNeighboodDetails
+export default SelectedNeighborhoodDetails;

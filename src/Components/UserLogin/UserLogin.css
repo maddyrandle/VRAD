@@ -1,20 +1,34 @@
+.userLoginWrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
 .UserLoginTitle {
+  font-family: 'Fauna One', serif;
+  font-size: 1.28rem;
+  margin: 1rem;
   text-decoration: underline;
 }
 
-.UserLoginBtn {
+.singInButton {
   background: #af877d;
-  color: black;
-  font-size: 1.3rem;
-  margin-bottom: 1.5rem;
-  padding: .4rem 3rem;
+  border: none;
+  font-family: 'Fauna One', serif;
+  font-size: 1rem;
+  margin: 1rem;
+  padding: .5rem;
   text-decoration: none;
+  width: 8rem;
 }
 
 input {
   background: inherit;
   color: white;
+  font-family: 'Fauna One', serif;
   font-size: 1rem;
+  font-weight: bold;
   margin: .5rem;
-  padding: .5rem;
+  padding: .5rem .5rem .5rem 1rem;
 }

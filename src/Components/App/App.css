@@ -1,13 +1,8 @@
-.App {
-
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Fauna+One&display=swap');
 
 button {
   cursor: pointer;
 }
-
-/* Page 2 */
 
 .landingPageWrapper {
   background: #af877d;

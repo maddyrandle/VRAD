@@ -1,18 +1,21 @@
-/* Page 1 */
-
 .loginContainerWrapper {
+  align-items: center;
   background-image: url("https://i.postimg.cc/L8d4zrqN/owen-lystrup-chaq-HXl-Oz-Ys-unsplash.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  height: 48rem;
+  height: 100vh;
   justify-content: center;
 }
 
 .loginContainer {
-  background: rgba(0, 0, 0, .7);
+  background: rgba(0, 0, 0, .75);
   color: white;
-  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 45rem;
   text-align: center;
   width: 50rem;
 }
