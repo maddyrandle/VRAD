@@ -15,6 +15,7 @@
 .usersName {
   font-family: 'Fauna One', serif;
   font-size: 2rem;
+  text-transform: capitalize;
 }
 
 .signOutBtn,
