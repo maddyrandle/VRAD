@@ -1,5 +1,6 @@
 .listingDetailsContainer {
   background: #602f33;
+  /* background: rgba(96, 47, 51, .75); */
   border: .1rem solid black;
   display: flex;
   overflow: scroll;
@@ -10,14 +11,13 @@
   width: 88rem;
 }
 
-.blah {
+.listingDetailsWrapper {
   align-items: center;
   display: flex;
   flex-direction: column;
   padding: 1rem;
   width: 90rem;
 }
-
 
 .allListingDetails {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -28,6 +28,15 @@
 }
 
 .allFavoriteListings {
-  border: 2px solid green;
+  background: #602f33;
+  border: 2px solid black;
   display: flex;
+  margin: 2rem;
+}
+
+.noFavoritesMessage {
+  font-family: 'Fauna One', serif;
+  font-size: 1.5rem;
+  margin: 1rem;
+  text-align: center;
 }

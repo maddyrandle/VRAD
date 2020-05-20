@@ -1,15 +1,52 @@
-.favoritePropertyBtn {
+.property {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+}
+
+.nameContainer {
+  align-items: center;
+  display: flex;
+}
+
+.name {
+  font-family: 'Fauna One', serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.favoritedPropertyImgContainer {
+  height: 20rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  width: 25rem;
+}
+
+.favoritedPropertyImg {
+  height: 100%;
+  width: 25rem;
+}
+
+.propertyBtn {
   border: .1rem solid black;
-  background: white;
   color: black;
-
-
-  /* background: #ba302e;
-  border: none;
-  color: white; */
-
+  display: flex;
   font-family: 'Fauna One', serif;
   font-size: 1rem;
+  justify-content: center;
+  margin-bottom: .5rem;
+  padding: .5rem;
+  text-decoration: none;
+  width: 10rem;
+}
+
+.favoritePropertyBtn {
+  border: .1rem solid black;
+  color: black;
+  font-family: 'Fauna One', serif;
+  font-size: 1rem;
+  margin-top: .5rem;
   padding: .5rem;
   width: 10rem;
 }

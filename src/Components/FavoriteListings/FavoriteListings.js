@@ -3,7 +3,7 @@ import './FavoriteListings.css';
 
 const FavoriteListings = ({ currentState, resetState }) => {
   return (
-    <h1>Favorites</h1>
+    <h1 className="favoritesHeader">Favorites</h1>
   );
 }
 
