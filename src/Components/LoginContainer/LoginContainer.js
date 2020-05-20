@@ -10,7 +10,7 @@ const LoginContainer = ({ getPurpose, setUserName, setPassword, stayType, valida
     <section className="loginContainerWrapper">
       <section className="loginContainer">
         <Title />
-        <form>
+        <section>
           <UserStayType
             getPurpose={ getPurpose }
           />
@@ -21,7 +21,7 @@ const LoginContainer = ({ getPurpose, setUserName, setPassword, stayType, valida
             validateUser={ validateUser}
             validatePassword= { validatePassword }
           />
-        </form>
+        </section>
       </section>
     </section>
   );
