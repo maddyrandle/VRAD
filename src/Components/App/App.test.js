@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitfor } from '@testing-library/react';
+import { render, waitfor, fireEvent } from '@testing-library/react';
 import App from './App';
 import '@testing-library/jest-dom';
 import { getListings } from '../../apiRequest'
@@ -27,6 +27,7 @@ describe(App, () => {
   it('renders without crashing', () => {
    const app = render(<App />)
   });
+
   it('should load the app with the correct data', () => {
     const app = render(<App />)
     getListings.mockResolvedValueOnce(mockedData)
