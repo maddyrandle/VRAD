@@ -19,11 +19,6 @@ VRAD is an appication we built during our time at [Turing School of Softwar and 
 4. run `npm start`
 5. Open localhost:3000 in your favorite browser (unless your terminal says otherwise)
 
-## Animation
-![Login page animation](https://media.giphy.com/media/elDSmxDEERNcy7REs1/giphy.gif)
-
-
-
 ## App Screenshots
 ### Login Page
 ![Picture of Login Page](https://i.postimg.cc/8crYPTbf/Login-Page.png)
