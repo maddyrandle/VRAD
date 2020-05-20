@@ -69,7 +69,7 @@ describe(ListingDetailsContainer, () => {
     name: 'River North',
     location: 'North of Downtown Denver',
     about: 'Rino is Great',
-    listings: {
+    listings: [{
       name: 'Hip RiNo Party Spot',
       address: {
         street: '2250 lawrence drive',
@@ -84,7 +84,7 @@ describe(ListingDetailsContainer, () => {
         features: ['hot tub', 'esspresso machine'],
         listing_id: 3
       }
-    }
+    }]
   }
 }
 
@@ -93,13 +93,13 @@ describe(ListingDetailsContainer, () => {
   });
 
   it('should render Neighborhoods by default', () => {
-    const { getByText } = render(<MemoryRouter><ListingDetailsContainer currentState={mockedData} renderCondition={'allAreas'} /></MemoryRouter>)
+    const { getByText } = render(<MemoryRouter><ListingDetailsContainer currentState={mockedState} renderCondition={'allAreas'} /></MemoryRouter>)
     const rino = getByText('River North')
   })
 
   it('should render the selected Neighborhood', () => {
-    const { getByText } = render(<MemoryRouter><ListingDetailsContainer currentState={mockedData} renderCondition={'selectedArea'} /></MemoryRouter>)
-    const rino = getByText('River North')
+    const { getByText } = render(<MemoryRouter><ListingDetailsContainer key={mockedSelectedArea.details.id} currentState={mockedState} selectedArea={mockedSelectedArea} renderCondition={'selectedArea'} /></MemoryRouter>)
+    const rino = getByText('Hip RiNo Party Spot')
   })
 
 })

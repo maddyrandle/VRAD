@@ -26,8 +26,9 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
           <Property
           selectedArea={selectedArea}
           name={listing.name}
-          areaID={listing.area_id}
-          listingID={listing.listing_id}/>
+          areaid={listing.area_id}
+          key={listing.listing_id}
+          listingid={listing.listing_id}/>
         )
       })
   } else if (renderCondition === 'listingDetails') {
