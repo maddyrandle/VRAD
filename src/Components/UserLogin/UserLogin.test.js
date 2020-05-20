@@ -4,30 +4,28 @@ import UserLogin from '../UserLogin/UserLogin';
 import '@testing-library/jest-dom/extend-expect';
 import {MemoryRouter} from 'react-router-dom'
 
+import UserStayType from '../UserStayType/UserStayType'
 
 describe(UserLogin, () => {
 
-  const mockChangePassword = jest.fn()
-  const mockChangeUserName = jest.fn()
-  const mockHandleSubmit = jest.fn()
-  fireEvent.change(mockChangePassword, {target: {value: 'Password'}})
-  // fireEvent.change(mockChangeUserName, {target: {value: 'Name'}})
+  const mockSetPassword = jest.fn()
+  const mockSetUser = jest.fn()
 
   it('renders without crashing', () => {
    const userLogin = render(<MemoryRouter><UserLogin /></MemoryRouter>)
   });
 
   it('should handle the user input', () => {
-    const { getByText } = render(<MemoryRouter><UserLogin /></MemoryRouter>)
+    const { getByText, getByPlaceholderText } = render(<MemoryRouter><UserLogin setUserName={mockSetUser} setPassword={mockSetPassword}/></MemoryRouter>)
 
     const nameInput = getByPlaceholderText('username')
-    fireEvent.change(mockChangeUserName, {target: {value: 'Name'}})
+    fireEvent.change(nameInput, {target: {value: 'Name'}})
 
     const passwordInput = getByPlaceholderText('password')
-    fireEvent.change(mockChangePassword, {target: {value: 'Password'}})
+    fireEvent.change(passwordInput, {target: {value: 'Password'}})
 
-    const loginBtn = getByPlaceholderText('Submit')
-
-    
+    expect(mockSetUser).toBeCalledWith('Name')
+    expect(mockSetPassword).toBeCalledWith('Password')
   })
+  
 })

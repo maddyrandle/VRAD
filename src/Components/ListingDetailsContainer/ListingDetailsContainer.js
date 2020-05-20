@@ -75,8 +75,6 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
         </section>
       )
     }
-
-
   }
 
   return (

@@ -25,6 +25,7 @@ describe(App, () => {
     }
   }
 }
+
   it('renders without crashing', () => {
    const app = render(<App />)
   });
