@@ -32,6 +32,7 @@
   border: 2px solid black;
   display: flex;
   margin: 2rem;
+  overflow: scroll;
 }
 
 .noFavoritesMessage {
