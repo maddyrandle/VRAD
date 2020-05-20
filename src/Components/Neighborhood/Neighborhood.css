@@ -3,30 +3,32 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: flex;
   flex-direction: column;
-  margin: 1rem;
-  overflow: scroll;
-  scroll-behavior: smooth;
-  width: 27rem;
-  height: 43rem;
+  height: 41rem;
+  margin: 2.5rem;
+}
+
+.nameContainer {
+  display: flex;
+  height: 5rem;
 }
 
 .fullName {
   padding: 1rem;
   font-family: 'Fauna One', serif;
-  font-size: 2.3rem;
-  height: 5rem;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .imageContainer {
   align-items: center;
   display: flex;
-  height: 25rem;
+  height: 23rem;
   justify-content: center;
 }
 
 .neighborhoodImg {
-  height: 25rem;
-  width: auto;
+  height: 100%;
+  width: 30rem;
 }
 
 .descriptionContainer {
@@ -46,6 +48,7 @@
   font-family: 'Fauna One', serif;
   font-size: 1rem;
   font-weight: bold;
+  margin-top: .3rem;
   padding: .5rem;
   text-decoration: none;
 }

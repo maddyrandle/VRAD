@@ -1,7 +1,8 @@
 .listingDetailsContainer {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  justify-content: flex-start;
   padding: 1rem;
 }
 

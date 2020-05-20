@@ -6,7 +6,9 @@ const Neighborhood = ({nickname, description, fullName, id}) => {
   var neighborhoodImg = `/Images/${nickname}.jpeg`
   return (
     <section className="neighborhoodContainer">
-      <p className="fullName">{fullName}</p>
+      <div className="nameContainer">
+        <p className="fullName">{fullName}</p>
+      </div>
       <div className="imageContainer">
         <img src={`${neighborhoodImg}`} className='neighborhoodImg' />
       </div>

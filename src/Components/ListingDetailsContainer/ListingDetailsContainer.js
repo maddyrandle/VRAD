@@ -12,11 +12,11 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
     var details = areaValues.map(areas => {
       return areas.map(area => {
         return area = <Neighborhood
-        key={area.details.id}
-        nickname={area.area}
-        description={area.details.about}
-        fullName={area.details.name}
-        id={area.details.id} />
+          key={area.details.id}
+          nickname={area.area}
+          description={area.details.about}
+          fullName={area.details.name}
+          id={area.details.id} />
       })
     })
   } else if (renderCondition === 'selectedArea') {
@@ -24,10 +24,10 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
       var details = listings.map(listing => {
         return (
           <Property
-          selectedArea={selectedArea}
-          name={listing.name}
-          areaID={listing.area_id}
-          listingID={listing.listing_id}/>
+            selectedArea={selectedArea}
+            name={listing.name}
+            areaID={listing.area_id}
+            listingID={listing.listing_id}/>
         )
       })
   } else if (renderCondition === 'listingDetails') {
@@ -75,12 +75,10 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
         </section>
       )
     }
-
-
   }
 
   return (
-    <section className='listingDetailsContainer'>
+    <section className="listingDetailsContainer">
       {details}
     </section>
   );
