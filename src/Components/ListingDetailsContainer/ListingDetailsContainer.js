@@ -3,9 +3,10 @@ import Neighborhood from '../Neighborhood/Neighborhood';
 import Property from '../Property/Property';
 import ListingPhotos from '../ListingPhotos/ListingPhotos';
 import ListingDetails from '../ListingDetails/ListingDetails';
+import FavoriteListingsDetails from '../FavoriteListingsDetails/FavoriteListingsDetails';
 import css from './ListingDetailsContainer.css'
 
-const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, listingDetails}) => {
+const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, listingDetails, handleFarovites}) => {
   if (renderCondition === 'allAreas') {
     let areaValues = Object.values(currentState.areas)
     var details = areaValues.map(areas => {
@@ -36,15 +37,46 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
         <section className="allListingDetails">
           <ListingPhotos listingDetails={listingDetails}/>
           <ListingDetails
+            areaid={details.area_id}
+            listingid={details.listing_id}
             name={details.name}
             address={details.address}
             beds={details.details.beds}
             baths={details.details.baths}
             costPerNight={details.details.cost_per_night}
-            features={details.details.features} />
+            features={details.details.features}
+            handleFarovites={handleFarovites}/>
         </section>
       </section>
     )
+  } else if (renderCondition === 'favorites') {
+    var details = currentState.favorites;
+
+    if (!details.length) {
+      return (
+        <p>You do not have any listings saved.</p>
+      )
+    } else {
+      return (
+        <section className="listingDetailsContainer">
+          <section className="allFavoriteListings">
+          {
+            details.map(favorite => {
+              return ( <FavoriteListingsDetails
+                favorites={details}
+                name={favorite.name}
+                areaid={favorite.area_id}
+                listingid={favorite.listing_id}
+                handleFarovites={handleFarovites}
+              /> )
+            })
+          }
+          </section>
+        </section>
+      )
+    }
+
+
   }
 
   return (
