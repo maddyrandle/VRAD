@@ -21,13 +21,9 @@ class UserLogin extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     if(!this.props.validateUser || !this.props.validatePassword) {
-       this.setState({
-         errorMessage : 'Please enter a valid email & password'
-       })
+       this.setState({ errorMessage : 'Please enter a valid email & password' })
     } else if (!this.props.stayType) {
-      this.setState({
-        errorMessage : 'Please select a staytype'
-      })
+      this.setState({ errorMessage : 'Please select a staytype' })
     }
     else {
       this.props.history.push('/areas')
@@ -35,26 +31,24 @@ class UserLogin extends Component {
   }
 
   render() {
-  return (
-    <section>
-      <p className="UserLoginTitle">Login Below</p>
-      <form>
-        <input onChange={ this.updateUserName }
-          placeholder="username"
-          type="text"
-          name="username"
-        />
-        <input onChange={ this.updatePassword }
-          placeholder="password"
-          type="password"
-          name="password"
-        />
-      </form>
-      <button type="button" onClick={this.handleSubmit} placeholder='Submit'>Sign-In</button>
-      <p className='errorMessage'>{this.state.errorMessage}</p>
-    </section>
-  );
-}
+    return (
+      <section className="userLoginWrapper">
+        <p className="UserLoginTitle">Login Below</p>
+        <form>
+          <input onChange={ this.updateUserName }
+            placeholder="username"
+            type="text"
+            name="username" />
+          <input onChange={ this.updatePassword }
+            placeholder="password"
+            type="password"
+            name="password" />
+        </form>
+        <button type="button" className="singInButton" onClick={this.handleSubmit} placeholder='Submit'>Sign-In</button>
+        <p className='errorMessage'>{this.state.errorMessage}</p>
+      </section>
+    );
+  }
 }
 
 export default withRouter(UserLogin);

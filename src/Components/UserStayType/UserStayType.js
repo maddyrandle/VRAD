@@ -8,8 +8,8 @@ const UserStayType = ({ getPurpose }) => {
   }
 
   return (
-    <section className="userStayType">
-      <p>Please Choose a Booking Type</p>
+    <section className="userStayTypeWrapper">
+      <p className="stayTypeHeader">Select a Booking Type</p>
       <section className="stayTypes">
         <button className="buisnessBtn" id="buisness" onClick={ handleChange }>
           Buisness

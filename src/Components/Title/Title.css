@@ -1,16 +1,18 @@
 
-h1 {
-  font-size: 6rem;
-  font-weight: normal;
-  padding: 2.5rem 2rem 1rem;
+.header {
+  font-size: 7rem;
+  font-family: 'Cinzel', serif;
 }
 
-h2 {
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-h3 {
+.subHeaderOne {
+  font-family: 'Fauna One', serif;
   font-size: 1.5rem;
   font-weight: 400;
+}
+
+.subHeaderTwo {
+  font-family: 'Fauna One', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem 0 1rem;
 }

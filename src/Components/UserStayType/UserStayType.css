@@ -1,31 +1,30 @@
-/* Booking Purpose Section */
-.userStayType {
+.userStayTypeWrapper {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
+  margin: 1.5rem;
 }
 
-p {
-  font-size: 1.3rem;
-  margin-top: .7rem;
-  padding: 1rem;
+.stayTypeHeader {
+  font-family: 'Fauna One', serif;
+  font-size: 1.28rem;
+  margin-bottom: 1rem;
 }
 
 .stayTypes {
   background: #6c393a;
-  margin-bottom: 1rem;
-  height: 7rem;
-  width: 25rem;
 }
 
-button {
+.buisnessBtn,
+.vacationBtn,
+.otherBtn {
   background: #6c393a;
   border: none;
   color: white;
+  font-family: 'Fauna One', serif;
   font-size: 1rem;
-  margin: .5rem;
-  padding: 0 1rem;
+  margin: .3rem;
+  padding: .3rem 1rem;
 }
 
 img {
