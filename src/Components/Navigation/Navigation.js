@@ -11,7 +11,7 @@ const Navigation = (props) => {
 
   return (
     <nav className="navWrapper">
-      <h3 className="usersName">Hello, {props.currentState.user}!</h3>
+      <h3 className="usersName">Hello, {props.currentState.user.toLowerCase()}!</h3>
       <section className="navContent">
         <Link to={ '/' } className="signOutBtn" onClick={ handleSignOut }> Sign Out </Link>
         <Link to={ '/favorites' } className="favoritesBtn"> Favorites ({numFavorites}) </Link>

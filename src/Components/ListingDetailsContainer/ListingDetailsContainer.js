@@ -33,20 +33,18 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
   } else if (renderCondition === 'listingDetails') {
     var details = listingDetails;
     return (
-      <section className="listingDetailsContainer">
-        <section className="allListingDetails">
-          <ListingPhotos listingDetails={listingDetails}/>
-          <ListingDetails
-            areaid={details.area_id}
-            listingid={details.listing_id}
-            name={details.name}
-            address={details.address}
-            beds={details.details.beds}
-            baths={details.details.baths}
-            costPerNight={details.details.cost_per_night}
-            features={details.details.features}
-            handleFarovites={handleFarovites}/>
-        </section>
+      <section className="blah">
+        <ListingDetails
+          areaid={details.area_id}
+          listingid={details.listing_id}
+          name={details.name}
+          address={details.address}
+          beds={details.details.beds}
+          baths={details.details.baths}
+          costPerNight={details.details.cost_per_night}
+          features={details.details.features}
+          handleFarovites={handleFarovites}/>
+        <ListingPhotos listingDetails={listingDetails} />
       </section>
     )
   } else if (renderCondition === 'favorites') {

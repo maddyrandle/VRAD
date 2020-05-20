@@ -13,7 +13,7 @@ const FavoriteListingsDetails = ({ favorites, name, areaid, listingid, handleFar
       <div className='property'>
         <p className="name">{name}</p>
         <Link to={ `/areas/${areaid}/listings/${listingid}` } className="propertyBtn" areaID={areaid} listingID={listingid}>More Details</Link>
-        <button className="favoritePropertyBtn" onClick={ handleFarovite }>Favorite this Property</button>
+        <button className="favoritePropertyBtn" onClick={ handleFarovite }>Favorite/Unfavorite</button>
       </div>
     </section>
   )

@@ -10,7 +10,7 @@ const PageHeaderContainer = ({ currentState, renderCondition, selectedArea, rese
 
   if (renderCondition === 'allAreas') {
     topContainer = <LandingPageGreeting currentState={currentState} />
-  } else if (renderCondition === 'selectedArea' || renderCondition === 'listingDetails') {
+  } else if (renderCondition === 'selectedArea') {
       topContainer = <SelectedNeighborhoodDetails selectedArea={selectedArea} />
   } else if (renderCondition === 'favorites') {
       topContainer = <FavoriteListings />

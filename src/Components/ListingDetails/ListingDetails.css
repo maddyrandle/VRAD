@@ -1,25 +1,40 @@
 .listingDetails {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  height: 30rem;
-  margin: 1rem 0 1rem 0;
-  overflow: scroll;
-  width: 40rem;
+  padding: 1rem;
+  width: 100%;
 }
 
 .propertyDetails {
   align-items: flex-start;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  list-style: none;
   margin: 1rem;
-  padding-left: 5rem;
 }
 
-p {
+.propertyDetailsName {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.propertyDetailsAddress {
+  font-family: 'Fauna One', serif;
+  font-size: 1.5rem;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 li {
+  font-family: 'Fauna One', serif;
+  font-size: 1.3rem;
   margin: .5rem;
+}
+
+.favoritePropertyBtn {
+  padding: 1rem;
+
 }
