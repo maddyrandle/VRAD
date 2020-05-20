@@ -4,6 +4,7 @@ import App from './App';
 import '@testing-library/jest-dom';
 import { getListings } from '../../apiRequest'
 jest.mock('../../apiRequest')
+
 describe(App, () => {
   const mockedData =
     {area: 'RiNo',
