@@ -20,7 +20,8 @@ VRAD is an appication we built during our time at [Turing School of Softwar and 
 5. Open localhost:3000 in your favorite browser (unless your terminal says otherwise)
 
 ## Animation
-![Login page animation](https://giphy.com/gifs/elDSmxDEERNcy7REs1/html5)
+![Login page animation](https://media.giphy.com/media/elDSmxDEERNcy7REs1/giphy.gif)
+
 
 
 ## App Screenshots
