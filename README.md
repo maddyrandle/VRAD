@@ -20,14 +20,15 @@ VRAD is an appication we built during our time at [Turing School of Softwar and 
 5. Open localhost:3000 in your favorite browser (unless your terminal says otherwise)
 
 ## Animation
-![Login page animation](https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif)
+![Login page animation](https://giphy.com/gifs/elDSmxDEERNcy7REs1/html5)
+
 
 ## App Screenshots
 ### Login Page
-![Picture of Login Page](https://i.postimg.cc/G3Q0NPKw/jonas-jacobsson-2xa-F4-Tbj-XT0-unsplash.jpg)
+![Picture of Login Page](https://i.postimg.cc/8crYPTbf/Login-Page.png)
 
 ### Neighborhoods Page
-![Picture of Neighborhoods Page](https://i.postimg.cc/tCqbCvJ4/jc-gellidon-1g3q-Vp7yn-X4-unsplash.jpg)
+![Picture of Neighborhoods Page](https://i.postimg.cc/c1g18Y9w/Neighborhood-Page.png)
 
 ### Property Listings Page
-![Picture of Property Listings Page](https://i.postimg.cc/5ypZC1yN/adam-chang-nt-BPy-GZCMWg-unsplash.jpg)
+![Picture of Property Listings Page](https://i.postimg.cc/5jdRXDP7/Property-Listings-Page.png)
