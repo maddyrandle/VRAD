@@ -73,7 +73,6 @@ class App extends Component {
     })
 
     this.state.favorites.splice(favoriteToRemoveIndex, 1);
-
     this.setState({favorites: this.state.favorites});
   }
 

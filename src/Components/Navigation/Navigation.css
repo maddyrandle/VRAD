@@ -1,11 +1,30 @@
-nav {
-  align-self: flex-end;
+.navWrapper {
+  align-items: center;
+  border-bottom: .1rem solid black;
   display: flex;
-  flex-direction: column;
-  width: 10rem;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.navContent {
+  display: flex;
+  justify-content: space-between;
+  width: 20rem;
+}
+
+.usersName {
+  font-family: 'Fauna One', serif;
+  font-size: 2rem;
 }
 
 .signOutBtn,
-.otherNavBtn {
+.favoritesBtn {
+  border: .1rem solid black;
+  color: black;
+  font-family: 'Fauna One', serif;
+  font-size: 1.2rem;
   padding: .5rem;
+  text-decoration: none;
+  text-align: center;
+  width: 9rem;
 }
