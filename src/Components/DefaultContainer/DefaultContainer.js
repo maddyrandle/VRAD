@@ -17,37 +17,36 @@ const DefaultContainer = ({currentState, renderCondition, selectedArea, resetSta
       currentState={currentState}
       renderCondition={renderCondition}/>
   } else if (renderCondition === 'selectedArea') {
-    topContainer = <PageHeaderContainer
-      currentState={currentState}
-      selectedArea={selectedArea}
-      renderCondition={renderCondition}
-      resetState={resetState}
-      getData={getData} />
-    bottomContainer = <ListingDetailsContainer
-      selectedArea={selectedArea}
-      renderCondition={renderCondition}/>
-  }
-  else if (renderCondition === 'listingDetails') {
-    topContainer = <PageHeaderContainer
-      currentState={currentState}
-      selectedArea={selectedArea}
-      renderCondition={renderCondition}
-      resetState={resetState}
-      getData={getData} />
-    bottomContainer = <ListingDetailsContainer
-      listingDetails={listingDetails}
-      renderCondition={renderCondition}
-      handleFarovites={handleFarovites}/>
+      topContainer = <PageHeaderContainer
+        currentState={currentState}
+        selectedArea={selectedArea}
+        renderCondition={renderCondition}
+        resetState={resetState}
+        getData={getData} />
+      bottomContainer = <ListingDetailsContainer
+        selectedArea={selectedArea}
+        renderCondition={renderCondition}/>
+  } else if (renderCondition === 'listingDetails') {
+      topContainer = <PageHeaderContainer
+        currentState={currentState}
+        selectedArea={selectedArea}
+        renderCondition={renderCondition}
+        resetState={resetState}
+        getData={getData} />
+      bottomContainer = <ListingDetailsContainer
+        listingDetails={listingDetails}
+        renderCondition={renderCondition}
+        handleFarovites={handleFarovites}/>
   } else if (renderCondition === 'favorites') {
-    topContainer = <PageHeaderContainer
-      currentState={currentState}
-      renderCondition={renderCondition}
-      resetState={resetState}
-      getData={getData} />
-    bottomContainer = <ListingDetailsContainer
-      currentState={currentState}
-      renderCondition={renderCondition}
-      handleFarovites={handleFarovites} />
+      topContainer = <PageHeaderContainer
+        currentState={currentState}
+        renderCondition={renderCondition}
+        resetState={resetState}
+        getData={getData} />
+      bottomContainer = <ListingDetailsContainer
+        currentState={currentState}
+        renderCondition={renderCondition}
+        handleFarovites={handleFarovites} />
   }
 
   return (
