@@ -24,10 +24,11 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
       var details = listings.map(listing => {
         return (
           <Property
-            selectedArea={selectedArea}
-            name={listing.name}
-            areaID={listing.area_id}
-            listingID={listing.listing_id}/>
+          selectedArea={selectedArea}
+          name={listing.name}
+          areaid={listing.area_id}
+          key={listing.listing_id}
+          listingid={listing.listing_id}/>
         )
       })
   } else if (renderCondition === 'listingDetails') {

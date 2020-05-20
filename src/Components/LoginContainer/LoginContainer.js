@@ -9,15 +9,18 @@ const LoginContainer = ({ getPurpose, setUserName, setPassword, stayType, valida
     <section className="loginContainerWrapper">
       <section className="loginContainer">
         <Title />
-        <form>
-          <UserStayType getPurpose={ getPurpose } />
+        <section>
+          <UserStayType
+            getPurpose={ getPurpose }
+          />
           <UserLogin
             setUserName={ setUserName }
             setPassword={ setPassword }
             stayType={ stayType }
             validateUser={ validateUser}
-            validatePassword= { validatePassword } />
-        </form>
+            validatePassword= { validatePassword }
+          />
+        </section>
       </section>
     </section>
   );
