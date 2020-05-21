@@ -5,7 +5,6 @@ import ListingPhotos from '../ListingPhotos/ListingPhotos';
 import ListingDetails from '../ListingDetails/ListingDetails';
 import FavoriteListingsDetails from '../FavoriteListingsDetails/FavoriteListingsDetails';
 import css from './ListingDetailsContainer.css'
-
 const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, listingDetails, handleFarovites}) => {
   if (renderCondition === 'allAreas') {
     let areaValues = Object.values(currentState.areas)
@@ -50,7 +49,6 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
     )
   } else if (renderCondition === 'favorites') {
     var details = currentState.favorites;
-
     if (!details.length) {
       return (
         <p className="noFavoritesMessage">You do not have any listings saved.</p>
@@ -73,12 +71,10 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
       )
     }
   }
-
   return (
     <section className="listingDetailsContainer">
       {details}
     </section>
   );
 }
-
 export default ListingDetailsContainer;

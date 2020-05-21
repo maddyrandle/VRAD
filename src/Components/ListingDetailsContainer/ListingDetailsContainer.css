@@ -1,6 +1,5 @@
 .listingDetailsContainer {
   background: #602f33;
-  /* background: rgba(96, 47, 51, .75); */
   border: .1rem solid black;
   display: flex;
   overflow: scroll;

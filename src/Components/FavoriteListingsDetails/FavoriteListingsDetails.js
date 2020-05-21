@@ -18,7 +18,7 @@ const FavoriteListingsDetails = ({ favorites, name, areaid, listingid, handleFar
         <div className="favoritedPropertyImgContainer">
           <img src={`${listingImg}`} className='favoritedPropertyImg' />
         </div>
-        <Link to={ `/areas/${areaid}/listings/${listingid}` } className="propertyBtn" areaID={areaid} listingID={listingid}>More Details</Link>
+        <Link to={ `/areas/${areaid}/listings/${listingid}` } className="propertyBtn" areaid={areaid} listingid={listingid}>More Details</Link>
         <button className="favoritePropertyBtn" onClick={ handleFarovite }>Unfavorite</button>
       </div>
     </section>

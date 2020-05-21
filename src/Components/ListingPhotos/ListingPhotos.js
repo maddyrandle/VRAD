@@ -9,7 +9,7 @@ const ListingPhotos = ({listingDetails}) => {
   ]
 
   let listingImages = imagesArray.map(image => {
-    return (<img src={`${image}`} className='listingImage' />)
+    return (<img src={`${image}`} key={image} className='listingImage' />)
   })
   
   return (

@@ -13,7 +13,7 @@ const Property = ({name, areaid, listingid, selectedArea}) => {
       <div className="propertyImageContainer">
         <img src={`${listingImg}`} className='defaultListingImage' />
       </div>
-      <Link to={ `/areas/${areaid}/listings/${listingid}` } className="moreDetailsBtn" areaID={areaid} listingID={listingid}> More Details </Link>
+      <Link to={ `/areas/${areaid}/listings/${listingid}` } className="moreDetailsBtn" areaid={areaid} listingid={listingid}> More Details </Link>
     </section>
   )
 }
