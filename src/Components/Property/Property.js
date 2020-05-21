@@ -2,8 +2,8 @@ import React from 'react';
 import './Property.css';
 import { Link } from 'react-router-dom';
 
-const Property = ({name, areaID, listingID, selectedArea}) => {
-  var listingImg = `/Images/${listingID}_a.jpg`
+const Property = ({name, areaid, listingid, selectedArea}) => {
+  var listingImg = `/Images/${listingid}_a.jpg`
 
   return (
     <section className="propertyContainer">
@@ -13,7 +13,7 @@ const Property = ({name, areaID, listingID, selectedArea}) => {
       <div className="propertyImageContainer">
         <img src={`${listingImg}`} className='defaultListingImage' />
       </div>
-      <Link to={ `/areas/${areaID}/listings/${listingID}` } className="moreDetailsBtn" areaID={areaID} listingID={listingID}> More Details </Link>
+      <Link to={ `/areas/${areaid}/listings/${listingid}` } className="moreDetailsBtn" areaID={areaid} listingID={listingid}> More Details </Link>
     </section>
   )
 }
