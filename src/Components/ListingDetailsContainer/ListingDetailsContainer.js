@@ -5,7 +5,6 @@ import ListingPhotos from '../ListingPhotos/ListingPhotos';
 import ListingDetails from '../ListingDetails/ListingDetails';
 import FavoriteListingsDetails from '../FavoriteListingsDetails/FavoriteListingsDetails';
 import css from './ListingDetailsContainer.css'
-
 const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, listingDetails, handleFarovites}) => {
   if (renderCondition === 'allAreas') {
     let areaValues = Object.values(currentState.areas)
@@ -24,36 +23,32 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
       var details = listings.map(listing => {
         return (
           <Property
-          key={listing.listing_id}
           selectedArea={selectedArea}
           name={listing.name}
           areaid={listing.area_id}
+          key={listing.listing_id}
           listingid={listing.listing_id}/>
         )
       })
   } else if (renderCondition === 'listingDetails') {
     var details = listingDetails;
     return (
-      <section className="listingDetailsContainer">
-        <section className="allListingDetails">
-          <ListingPhotos listingDetails={listingDetails}/>
-          <ListingDetails
-            key={details.listing_id}
-            areaid={details.area_id}
-            listingid={details.listing_id}
-            name={details.name}
-            address={details.address}
-            beds={details.details.beds}
-            baths={details.details.baths}
-            costPerNight={details.details.cost_per_night}
-            features={details.details.features}
-            handleFarovites={handleFarovites}/>
-        </section>
+      <section className="listingDetailsWrapper">
+        <ListingDetails
+          areaid={details.area_id}
+          listingid={details.listing_id}
+          name={details.name}
+          address={details.address}
+          beds={details.details.beds}
+          baths={details.details.baths}
+          costPerNight={details.details.cost_per_night}
+          features={details.details.features}
+          handleFarovites={handleFarovites}/>
+        <ListingPhotos listingDetails={listingDetails} />
       </section>
     )
   } else if (renderCondition === 'favorites') {
     var details = currentState.favorites;
-
     if (!details.length) {
       return (
         <p className="noFavoritesMessage">You do not have any listings saved.</p>
@@ -76,12 +71,10 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
       )
     }
   }
-
   return (
     <section className="listingDetailsContainer">
       {details}
     </section>
   );
 }
-
 export default ListingDetailsContainer;
