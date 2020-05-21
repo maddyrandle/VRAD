@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Property.css';
 import { Link } from 'react-router-dom';
 
@@ -19,3 +20,10 @@ const Property = ({name, areaid, listingid, selectedArea}) => {
 }
 
 export default Property;
+
+Property.propTypes = {
+  name: PropTypes.string,
+  areaid: PropTypes.number,
+  listingid: PropTypes.number,
+  selectedArea: PropTypes.string,
+};

@@ -1,10 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Neighborhood from '../Neighborhood/Neighborhood';
 import Property from '../Property/Property';
 import ListingPhotos from '../ListingPhotos/ListingPhotos';
 import ListingDetails from '../ListingDetails/ListingDetails';
 import FavoriteListingsDetails from '../FavoriteListingsDetails/FavoriteListingsDetails';
 import css from './ListingDetailsContainer.css'
+
 const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, listingDetails, handleFarovites}) => {
   if (renderCondition === 'allAreas') {
     let areaValues = Object.values(currentState.areas)
@@ -77,4 +79,12 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
     </section>
   );
 }
+
 export default ListingDetailsContainer;
+
+ListingDetailsContainer.propTypes = {
+  currentState: PropTypes.object,
+  renderCondition: PropTypes.string,
+  selectedArea: PropTypes.string,
+  handleFarovites: PropTypes.func,
+};

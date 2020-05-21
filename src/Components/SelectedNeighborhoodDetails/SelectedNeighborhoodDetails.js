@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './SelectedNeighborhoodDetails.css';
 
 const SelectedNeighborhoodDetails = ({selectedArea}) => {
@@ -11,3 +12,7 @@ const SelectedNeighborhoodDetails = ({selectedArea}) => {
 }
 
 export default SelectedNeighborhoodDetails;
+
+SelectedNeighborhoodDetails.propTypes = {
+  selectedArea: PropTypes.string,
+};

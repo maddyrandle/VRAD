@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import LandingPageGreeting from '../LandingPageGreeting/LandingPageGreeting';
 import SelectedNeighborhoodDetails from '../SelectedNeighborhoodDetails/SelectedNeighborhoodDetails'
 import FavoriteListings from '../FavoriteListings/FavoriteListings'
@@ -25,3 +26,11 @@ const PageHeaderContainer = ({ currentState, renderCondition, selectedArea, rese
 }
 
 export default PageHeaderContainer;
+
+PageHeaderContainer.propTypes = {
+  currentState: PropTypes.object,
+  renderCondition: PropTypes.string,
+  selectedArea: PropTypes.string,
+  resetState: PropTypes.func,
+  getData: PropTypes.func,
+};

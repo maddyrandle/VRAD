@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './FavoriteListingsDetails.css';
 
@@ -26,3 +27,11 @@ const FavoriteListingsDetails = ({ favorites, name, areaid, listingid, handleFar
 }
 
 export default FavoriteListingsDetails;
+
+FavoriteListingsDetails.propTypes = {
+  favorites: PropTypes.array,
+  name: PropTypes.string,
+  areaid: PropTypes.number,
+  listingid: PropTypes.number,
+  handleFarovites: PropTypes.func,
+};

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom'
 import './UserLogin.css';
 
@@ -52,3 +53,11 @@ class UserLogin extends Component {
 }
 
 export default withRouter(UserLogin);
+
+UserLogin.propTypes = {
+  setUserName: PropTypes.func,
+  setPassword: PropTypes.func,
+  stayType: PropTypes.string,
+  validateUser: PropTypes.string,
+  validatePassword: PropTypes.string,
+};

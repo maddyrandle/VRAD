@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './ListingDetails.css'
 
 const ListingDetails = ({areaid, listingid, name, address, beds, baths, costPerNight, features, handleFarovites}) => {
@@ -23,3 +24,15 @@ const ListingDetails = ({areaid, listingid, name, address, beds, baths, costPerN
 
 
 export default ListingDetails;
+
+ListingDetails.propTypes = {
+  areaid: PropTypes.number,
+  listingid: PropTypes.number,
+  name: PropTypes.string,
+  address: PropTypes.string,
+  beds: PropTypes.number,
+  baths: PropTypes.number,
+  costPerNight: PropTypes.number,
+  features: PropTypes.array,
+  handleFarovites: PropTypes.func,
+};

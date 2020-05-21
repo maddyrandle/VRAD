@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './ListingPhotos.css'
 
 const ListingPhotos = ({listingDetails}) => {
@@ -11,7 +12,7 @@ const ListingPhotos = ({listingDetails}) => {
   let listingImages = imagesArray.map(image => {
     return (<img src={`${image}`} key={image} className='listingImage' />)
   })
-  
+
   return (
     <section className="listingPhotos">
       {listingImages}
@@ -20,3 +21,7 @@ const ListingPhotos = ({listingDetails}) => {
 }
 
 export default ListingPhotos;
+
+ListingPhotos.propTypes = {
+  listingDetails: PropTypes.object,
+};

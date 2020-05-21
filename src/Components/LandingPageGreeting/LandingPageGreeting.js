@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './LandingPageGreeting.css';
 
 const LandingPageGreeting = ({currentState}) => {
@@ -25,3 +26,7 @@ const LandingPageGreeting = ({currentState}) => {
 }
 
 export default LandingPageGreeting;
+
+LandingPageGreeting.propTypes = {
+  currentState: PropTypes.object,
+};

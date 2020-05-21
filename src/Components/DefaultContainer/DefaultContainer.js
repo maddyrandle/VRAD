@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import PageHeaderContainer from '../PageHeaderContainer/PageHeaderContainer'
 import ListingDetailsContainer from '../ListingDetailsContainer/ListingDetailsContainer'
-import './DefaultContainer.css'
 
 const DefaultContainer = ({currentState, renderCondition, selectedArea, resetState, listingDetails, handleFarovites, getData}) => {
   let topContainer;
@@ -58,3 +58,13 @@ const DefaultContainer = ({currentState, renderCondition, selectedArea, resetSta
 }
 
 export default DefaultContainer;
+
+DefaultContainer.propTypes = {
+  currentState: PropTypes.object,
+  renderCondition: PropTypes.string,
+  selectedArea: PropTypes.string,
+  resetState: PropTypes.func,
+  listingDetails: PropTypes.object,
+  handleFarovites: PropTypes.func,
+  getData: PropTypes.func,
+};
