@@ -24,7 +24,13 @@ VRAD is an appication we built during our time at [Turing School of Softwar and 
 ![Picture of Login Page](https://i.postimg.cc/8crYPTbf/Login-Page.png)
 
 ### Neighborhoods Page
-![Picture of Neighborhoods Page](https://i.postimg.cc/c1g18Y9w/Neighborhood-Page.png)
+![Picture of Neighborhoods Page](https://i.postimg.cc/ZRYdT81v/Neighborhoods-Page.png)
 
 ### Property Listings Page
-![Picture of Property Listings Page](https://i.postimg.cc/5jdRXDP7/Property-Listings-Page.png)
+![Picture of Property Listings Page](https://i.postimg.cc/50PFjHV7/Property-Listings-Page.png)
+
+### Listing's Details Page
+![Picture of Listing's Details Page](https://i.postimg.cc/0jbKS858/Listings-Details-Page.png)
+
+### Favorite Listings Page
+![Picture of Favorite Listings Page](https://i.postimg.cc/ZqSNQtHc/Favorites-Page.png)
