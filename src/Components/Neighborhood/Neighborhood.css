@@ -1,16 +1,55 @@
 .neighborhoodContainer {
+  background: white;
   align-items: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  margin: 1rem;
-  overflow: scroll;
-  scroll-behavior: smooth;
-  height: 25rem;
-  width: 25rem;
+  height: 36rem;
+  justify-content: flex-start;
+  margin: 1.5rem;
+  padding: 1rem;
+}
+
+.nameContainer {
+  display: flex;
+  height: 5rem;
+}
+
+.fullName {
+  padding: 1rem;
+  font-family: 'Fauna One', serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.imageContainer {
+  align-items: center;
+  display: flex;
+  height: 18rem;
 }
 
 .neighborhoodImg {
-  width: 95%;
+  height: 100%;
+  width: 28rem;
+}
+
+.descriptionContainer {
+  align-items: center;
+  display: flex;
+  height: 8rem;
+}
+
+.description {
+  font-family: 'Fauna One', serif;
+}
+
+.neighborhoodBtn {
+  border: .1rem solid black;
+  color: black;
+  font-family: 'Fauna One', serif;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: .3rem;
+  padding: .5rem;
+  text-decoration: none;
 }

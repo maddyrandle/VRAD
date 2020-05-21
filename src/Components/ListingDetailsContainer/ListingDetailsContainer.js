@@ -12,11 +12,11 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
     var details = areaValues.map(areas => {
       return areas.map(area => {
         return area = <Neighborhood
-        key={area.details.id}
-        nickname={area.area}
-        description={area.details.about}
-        fullName={area.details.name}
-        id={area.details.id} />
+          key={area.details.id}
+          nickname={area.area}
+          description={area.details.about}
+          fullName={area.details.name}
+          id={area.details.id} />
       })
     })
   } else if (renderCondition === 'selectedArea') {
@@ -56,12 +56,11 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
 
     if (!details.length) {
       return (
-        <p>You do not have any listings saved.</p>
+        <p className="noFavoritesMessage">You do not have any listings saved.</p>
       )
     } else {
       return (
-        <section className="listingDetailsContainer">
-          <section className="allFavoriteListings">
+        <section className="allFavoriteListings">
           {
             details.map(favorite => {
               return ( <FavoriteListingsDetails
@@ -73,14 +72,13 @@ const ListingDetailsContainer = ({currentState, renderCondition, selectedArea, l
               /> )
             })
           }
-          </section>
         </section>
       )
     }
   }
 
   return (
-    <section className='listingDetailsContainer'>
+    <section className="listingDetailsContainer">
       {details}
     </section>
   );

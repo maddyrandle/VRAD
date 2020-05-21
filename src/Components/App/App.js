@@ -54,50 +54,40 @@ class App extends Component {
     let foundArea = this.state.areas.areas.find(area => area.details.id === areaid);
     let favoritedListing = foundArea.details.listings.find(listing => listing.listing_id === listingid);
 
-
-    if (!this.state.favorites.includes(favoritedListing)) {
-      this.addPropertyToFavorites(favoritedListing);
-    } else {
-      this.removePropertyFromFavorites(favoritedListing);
-    }
+    !this.state.favorites.includes(favoritedListing) ? this.addPropertyToFavorites(favoritedListing) : this.removePropertyFromFavorites(favoritedListing);
   }
 
   addPropertyToFavorites = (favoritedListing) => {
     let addProperty = () => this.state.favorites.push(favoritedListing);
+
     !this.state.favorites.includes(favoritedListing) && addProperty();
 
-    this.setState({
-      favorites: this.state.favorites
-    });
+    this.setState({favorites: this.state.favorites});
   }
 
   removePropertyFromFavorites = (favoritedListing) => {
     let favoriteToRemoveIndex;
     let favoriteToRemove = this.state.favorites.find((favorite, index) => {
       favoriteToRemoveIndex = index;
-
       return favorite.listing_id === favoritedListing.listing_id
     })
 
     this.state.favorites.splice(favoriteToRemoveIndex, 1);
-
-    this.setState({
-      favorites: this.state.favorites
-    });
+    this.setState({favorites: this.state.favorites});
   }
 
   render() {
     return (
       <BrowserRouter>
-        <main className="App">
+        <main>
           <Route
-            exact path='/'render={() => <LoginContainer
+            exact path='/'render={ () => <LoginContainer
             getPurpose={this.getPurpose}
             setUserName={this.setUserName}
             setPassword={this.setPassword}
             stayType={this.state.stayType}
             validateUser={this.state.user}
-            validatePassword={this.state.password}/> }
+            validatePassword={this.state.password} /> }
           />
 
           <Route
@@ -106,7 +96,8 @@ class App extends Component {
             renderCondition='allAreas'
             name='Neighborhoods'
             resetState={this.resetState}
-            getData={this.componentDidMount} /> }
+            getData={this.componentDidMount} />
+            }
           />
 
           <Route
@@ -121,8 +112,7 @@ class App extends Component {
                 selectedArea={selectedArea}
                 renderCondition='selectedArea'
                 resetState={this.resetState}
-                getData={this.componentDidMount}
-              />
+                getData={this.componentDidMount} />
             }}
           />
 
@@ -135,6 +125,7 @@ class App extends Component {
               let listingDetails = selectedArea.details.listings.find(listing => {
                 return parseInt(match.params.listingID) === parseInt(listing.listing_id)
               })
+
               return <DefaultContainer
                 currentState={this.state}
                 selectedArea={selectedArea}
@@ -142,8 +133,7 @@ class App extends Component {
                 renderCondition='listingDetails'
                 resetState={this.resetState}
                 getData={this.componentDidMount}
-                handleFarovites={this.handleFarovites}
-              />
+                handleFarovites={this.handleFarovites} />
             }}
           />
 
@@ -153,7 +143,8 @@ class App extends Component {
             renderCondition='favorites'
             getData={this.componentDidMount}
             resetState={this.resetState}
-            handleFarovites={this.handleFarovites} /> }
+            handleFarovites={this.handleFarovites} />
+            }
           />
 
         </main>

@@ -1,15 +1,17 @@
 .listingPhotos {
-  border-right: .05rem solid black;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  margin: 1rem 0 1rem 0;
+  background: #602f33;
+  /* background: rgba(96, 47, 51, .75); */
+  display: flex;
+  height: 35rem;
+  justify-content: flex-start;
   overflow: scroll;
-  width: 40rem;
+  padding: 1rem;
+  width: 100%;
 }
 
 .listingImage {
-  border: 2px solid white;
-  margin: 1rem;
-  width:70%;
+  padding: 1rem;
+  width: auto;
+  height: 96%;
 }

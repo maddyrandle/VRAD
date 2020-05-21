@@ -4,15 +4,18 @@ import { Link } from 'react-router-dom'
 
 const Neighborhood = ({nickname, description, fullName, id}) => {
   var neighborhoodImg = `/Images/${nickname}.jpeg`
-
   return (
     <section className="neighborhoodContainer">
-      <div className='neighborhood'>
+      <div className="nameContainer">
         <p className="fullName">{fullName}</p>
-        <img src={`${neighborhoodImg}`} className='neighborhoodImg' />
-        <p className="description">{description}</p>
-        <Link to={`/areas/${id}/listings`} className="neighborhoodBtn" id={id}>Checkout {nickname}</Link>
       </div>
+      <div className="imageContainer">
+        <img src={`${neighborhoodImg}`} className='neighborhoodImg' />
+      </div>
+      <div className="descriptionContainer">
+        <p className="description">{description}</p>
+      </div>
+      <Link to={`/areas/${id}/listings`} className="neighborhoodBtn" id={id}>Checkout {nickname}</Link>
     </section>
   )
 }

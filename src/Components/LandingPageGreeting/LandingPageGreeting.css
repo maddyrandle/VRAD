@@ -1,14 +1,12 @@
-.landingPageGreeting {
-  border: 2px solid black;
-  display: flex;
-  flex-direction: column;
-}
-
-h1 {
+.welcomeMessage {
+  font-family: 'Cinzel', serif;
   font-size: 3rem;
+  padding: 1rem;
+  text-align: center;
 }
 
-h2 {
-  font-size: 2rem;
-  padding: 2rem;
+.greetingMessage {
+  font-family: 'Fauna One', serif;
+  font-size: 1.5rem;
+  text-align: center;
 }
