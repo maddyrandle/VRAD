@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Title from '../Title/Title';
 import UserStayType from '../UserStayType/UserStayType';
 import UserLogin from '../UserLogin/UserLogin';
@@ -27,3 +28,12 @@ const LoginContainer = ({ getPurpose, setUserName, setPassword, stayType, valida
 }
 
 export default LoginContainer;
+
+LoginContainer.propTypes = {
+  getPurpose: PropTypes.func,
+  setUserName: PropTypes.func,
+  setPassword: PropTypes.func,
+  stayType: PropTypes.string,
+  validateUser: PropTypes.string,
+  validatePassword: PropTypes.string,
+};

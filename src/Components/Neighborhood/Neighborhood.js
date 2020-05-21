@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Neighborhood.css'
 import { Link } from 'react-router-dom'
 
@@ -21,3 +22,10 @@ const Neighborhood = ({nickname, description, fullName, id}) => {
 }
 
 export default Neighborhood;
+
+Neighborhood.propTypes = {
+  nickname: PropTypes.string,
+  description: PropTypes.string,
+  fullName: PropTypes.string,
+  id: PropTypes.number,
+};

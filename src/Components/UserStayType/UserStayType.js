@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './UserStayType.css';
 
 const UserStayType = ({ getPurpose }) => {
@@ -29,3 +30,7 @@ const UserStayType = ({ getPurpose }) => {
 }
 
 export default UserStayType;
+
+UserStayType.propTypes = {
+  getPurpose: PropTypes.func,
+};
