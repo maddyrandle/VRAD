@@ -1,8 +1,9 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, findByText } from '@testing-library/react';
 import ListingDetailsContainer from './ListingDetailsContainer';
 import '@testing-library/jest-dom';
 import { MemoryRouter } from 'react-router-dom'
+import Property from '../Property/Property'
 import { getListings } from '../../apiRequest'
 jest.mock('../../apiRequest')
 
@@ -30,7 +31,7 @@ describe(ListingDetailsContainer, () => {
               beds: 3,
               cost_per_night: 420,
               features: ['hot tub', 'esspresso machine'],
-              listing_id: 3
+              listing_id: 5
             }
           }
         }
@@ -65,7 +66,7 @@ describe(ListingDetailsContainer, () => {
   const mockedSelectedArea = {
   area: 'RiNo',
   details: {
-    id: 590,
+    id: 599,
     name: 'River North',
     location: 'North of Downtown Denver',
     about: 'Rino is Great',
@@ -98,8 +99,8 @@ describe(ListingDetailsContainer, () => {
   })
 
   it('should render the selected Neighborhood', () => {
-    const { getByText } = render(<MemoryRouter><ListingDetailsContainer key={mockedSelectedArea.details.id} currentState={mockedState} selectedArea={mockedSelectedArea} renderCondition={'selectedArea'} /></MemoryRouter>)
-    const rino = getByText('Hip RiNo Party Spot')
+    const { getByText } = render(<MemoryRouter><Property key={mockedSelectedArea.details.id} currentState={mockedState} selectedArea={mockedSelectedArea} renderCondition={'selectedArea'} /></MemoryRouter>)
+    const rino = findByText('Hip RiNo Party Spot')
   })
 
 })
