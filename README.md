@@ -10,7 +10,7 @@ Justin Corbin - [GitHub](https://github.com/Corbinj22)
 **Technologies Used:**
 *React*, *React Router*, *ES6*, *TDD*, *CSS*, *Fetch API for receiving 3rd party data*
 
-VRAD is an appication we built during our time at [Turing School of Softwar and Design](http://turing.io). This project was a the first paried project of Turings 3 of 4 innings. This project gives an opporunity for Turing students to effectively and efficiecnlty build a dry React application using test driven development. Students are encoureaged to use diffrent types of React routers to access and pass down API information into their components through props. 
+VRAD is an appication we built during our time at [Turing School of Softwar and Design](http://turing.io). This was our paried project in module 3 of 4. The learning goal of VRAD was focused around effectively and efficiecntly building a dry React application using test driven development. We used diffrent types of React routers to access and pass down API information into their components through props. 
 
 ## Setup
 1. clone down this repo to desired location
